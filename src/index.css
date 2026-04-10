@@ -3,3 +3,14 @@
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes wave-colors {
+  0% { color: #24fcc6; } /* Cian */
+  33% { color: #4658f5; } /* Indigo */
+  66% { color: #9d3aff; } /* Violeta */
+  100% { color: #24e2ff; } /* Vuelve al Cian */
+}
+
+.animate-wave {
+  animation: wave-colors 4s infinite linear;
+}

@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="flex flex-col items-center justify-center py-20 text-center bg-slate-900">
       <h1 className="text-6xl font-extrabold text-white tracking-tight mb-4">
-        Hola, soy <span className="text-cyan-400">Roy Frey</span>
+        Hola, soy <span className="text-cyan-400 animate-wave">Roy Frey</span>
       </h1>
       <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-8">
         Analista de Sistemas & Desarrollador Fullstack. 

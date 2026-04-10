@@ -16,10 +16,10 @@ export default function Navbar() {
           <a href="#contacto" className="hover:text-cyan-400 transition-colors">Contacto</a>
         </div>
 
-        {/* Botón descargar CV  */}
+        {/* Botón descargar CV*/}
         <a 
-          href="/CV_Roy_Frey.pdf" // Nombre exacto del archivo en la carpeta public
-          download="CV_Roy_Frey.pdf" // Esto obliga al navegador a descargarlo en lugar de abrirlo
+          href="/CV_Roy.pdf"
+          download="CV_Roy.pdf"
           className="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-4 py-2 rounded-md hover:bg-cyan-500 hover:text-white transition-all text-sm font-medium"
         >
             Descargar CV

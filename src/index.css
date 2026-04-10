@@ -17,13 +17,14 @@ html {
 
 @keyframes button-wave {
   0% { background-color: #22d3ee; } /* Cian */
-  50% { background-color: #818cf8; } /* Indigo */
+  30% { background-color: #04c935; } /* Violeta */
+  70% { background-color: #818cf8; } /* Indigo */
   100% { background-color: #22d3ee; } /* Cian */
 }
 
 .hover-wave:hover {
-  animation: button-wave 2s infinite linear;
-  color: white; /* Para que el texto resalte */
-  transform: translateY(-2px); /* Un pequeño salto hacia arriba */
+  animation: button-wave 6s infinite linear;
+  color: white; 
+  transform: translateY(-2px);
   transition: transform 0.2s ease;
 }

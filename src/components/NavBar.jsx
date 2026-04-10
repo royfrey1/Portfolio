@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         {/* Nombre */}
         <div className="text-white font-bold text-xl tracking-wider">
-          ROY <span className="text-cyan-400">FREY</span>
+          ROY <span className="text-cyan-400 animate-wave">FREY</span>
         </div>
 
         {/* Links de navegación */}

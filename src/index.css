@@ -12,5 +12,18 @@ html {
 }
 
 .animate-wave {
-  animation: wave-colors 4s infinite linear;
+  animation: wave-colors 6s infinite linear;
+}
+
+@keyframes button-wave {
+  0% { background-color: #22d3ee; } /* Cian */
+  50% { background-color: #818cf8; } /* Indigo */
+  100% { background-color: #22d3ee; } /* Cian */
+}
+
+.hover-wave:hover {
+  animation: button-wave 2s infinite linear;
+  color: white; /* Para que el texto resalte */
+  transform: translateY(-2px); /* Un pequeño salto hacia arriba */
+  transition: transform 0.2s ease;
 }

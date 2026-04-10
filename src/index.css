@@ -16,15 +16,14 @@ html {
 }
 
 @keyframes button-wave {
-  0% { background-color: #22d3ee; } /* Cian */
-  30% { background-color: #04c935; } /* Violeta */
-  70% { background-color: #818cf8; } /* Indigo */
-  100% { background-color: #22d3ee; } /* Cian */
+  0% { background-color: #24fcc6; } /* Cian */
+  30% { background-color: #4658f5; } /* Indigo */
+  70% { background-color: #9d3aff; } /* Violeta */
+  100% { background-color: #24e2ff; } /* Cian */
 }
 
 .hover-wave:hover {
-  animation: button-wave 6s infinite linear;
+  animation: button-wave 4s infinite linear;
   color: white; 
-  transform: translateY(-2px);
   transition: transform 0.2s ease;
 }

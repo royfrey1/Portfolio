@@ -35,10 +35,12 @@ html {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+  50% { background-position: 50% 1000%; }
+  0% { background-position: 50% 0%; }   
 }
 
 .btn-rainbow {
-  /* Usamos tus colores: Cian, Indigo y Violeta */
+  
   background: linear-gradient(90deg, #24fcc6, #4658f5, #9d3aff, #24e2ff);
   background-size: 300% 100%;
   transition: all 0.4s ease;

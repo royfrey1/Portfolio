@@ -83,7 +83,7 @@ export default function Contact() {
                     placeholder="¿En qué puedo ayudarte?"
                     ></textarea>
             </div>
-            <button type="submit" className="bg-cyan-500 text-slate-300 px-6 py-3 font-medium rounded-lg hover-wave transition-all">
+            <button type="submit" className="bg-cyan-500 text-slate-800 px-6 py-3 font-medium rounded-lg hover-wave transition-all">
                     Enviar Mensaje
             </button>
             </form>

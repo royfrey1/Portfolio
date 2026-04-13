@@ -13,7 +13,7 @@ export default function Hero() {
         Desde Puerto Iguazu, Misiones, Argentina.
       </p>
       <div className="flex gap-4">
-        <a href="#projects" className="bg-cyan-500 border-slate-700 text-slate-300 px-6 py-3 rounded-lg font-medium hover-wave transition-all">
+        <a href="#projects" className="bg-cyan-500 border-slate-700 text-slate-300 px-6 py-3 rounded-lg font-medium btn-rainbow transition-all">
           Ver Proyectos
         </a>
         <a href="#contacto" className="border border-slate-700 text-slate-300 hover:bg-slate-800 px-6 py-3 rounded-lg font-medium transition-all">

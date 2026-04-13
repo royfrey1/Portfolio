@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4">
         {/* Logo */}
         <div className="text-2xl font-bold text-white mb-4">
-          ROY <span className="text-cyan-400 btn-rainbow">FREY</span>
+          ROY <span className="text-cyan-400 animate-wave">FREY</span>
         </div>
         
         {/* Título */}

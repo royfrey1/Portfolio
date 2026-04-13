@@ -13,11 +13,11 @@ export default function Hero() {
         Desde Puerto Iguazu, Misiones, Argentina.
       </p>
       <div className="flex gap-4">
-        {/* <a href="#projects" className="bg-cyan-500 text-slate-900 px-6 py-2 rounded-full font-bold hover-wave transition-all">
+        <a href="#projects" className="bg-cyan-500 border-slate-700 text-slate-300 px-6 py-3 rounded-lg font-medium hover-wave transition-all">
           Ver Proyectos
-        </a> */}
+        </a>
  
-        <a href="#projects" style={{
+        {/*<a href="#projects" style={{
           padding: '12px 24px',
           backgroundColor: '#00d8ff',
           color: '#0f172a',
@@ -27,7 +27,7 @@ export default function Hero() {
           marginRight: '15px'
         }}>
           Ver Proyectos
-        </a>
+        </a>*/}
         <a href="#contacto" className="border border-slate-700 text-slate-300 hover:bg-slate-800 px-6 py-3 rounded-lg font-medium transition-all">
           Contactar
         </a>

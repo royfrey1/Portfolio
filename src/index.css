@@ -27,3 +27,27 @@ html {
   color: white; 
   transition: transform 0.2s ease;
 }
+
+
+
+/* efecto de arcoíris */
+@keyframes rainbow-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-rainbow {
+  /* Usamos tus colores: Cian, Indigo y Violeta */
+  background: linear-gradient(90deg, #24fcc6, #4658f5, #9d3aff, #24e2ff);
+  background-size: 300% 100%;
+  transition: all 0.4s ease;
+  border: none;
+  color: #0f172a; /* Texto oscuro para que resalte sobre el brillo */
+}
+
+.btn-rainbow:hover {
+  animation: rainbow-shift 2s linear infinite;
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
+  transform: scale(1.01); /* Un pequeño crecimiento al pasar el mouse */
+}

@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function Contact() {
   return (
+    /* Seccion de contacto */
     <section id="contacto" className="py-20 bg-slate-900 px-4 scroll-mt-18">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
@@ -47,7 +48,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Formulario */}
+          {/* Formulario donde pueden contactarme */}
           <form action="https://formspree.io/f/xgopjelq" 
                 method="POST" 
                 className="space-y-4"

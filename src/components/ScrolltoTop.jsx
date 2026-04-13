@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 export default function ScrollToTop() {
+  // estado para controlar la visibilidad del botón
   const [isVisible, setIsVisible] = useState(false);
 
-  // Función para controlar la visibilidad del botón según el scroll
+  // cuando bajamos más de 300px, el botón se muestra, sino se oculta
   const toggleVisibility = () => {
     if (window.pageYOffset > 300) {
       setIsVisible(true);
@@ -20,6 +21,7 @@ export default function ScrollToTop() {
     });
   };
 
+  // Agregamos el event listener para detectar el scroll y limpiamos el listener al desmontar el componente para evitar memory leaks o sobrecarga de memoria
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility);
     return () => {
@@ -28,6 +30,7 @@ export default function ScrollToTop() {
   }, []);
 
   return (
+    // devolviendo el boton con estilos y animaciones, que solo se muestra cuando isVisible es true
     <div className="fixed bottom-6 right-6 z-50">
       <button
         type="button"

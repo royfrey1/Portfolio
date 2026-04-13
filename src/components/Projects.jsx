@@ -10,18 +10,19 @@ export default function Projects() {
   useEffect(() => {
     const obtenerProyectos = async () => {
       try {
+        // consulta a Supabase para traer los proyectos
         const { data, error } = await supabase
           .from('proyectos') 
           .select('*')
           .order('id', { ascending: true }); 
-
+        // console.log para verificar que traemos los datos correctamente, sino se muestra el error
           if (data) {
-          console.log("Datos recibidos de Supabase:", data); // <--- AGREGÁ ESTO
+          console.log("Datos recibidos de Supabase:", data); 
           setMisProyectos(data);
           }
 
         if (error) throw error;
-
+          // guardamos los datos en el estado para luego mostrarlos en la UI
         setMisProyectos(data);
       } catch (error) {
         console.error("Error al obtener datos:", error.message);
@@ -43,13 +44,15 @@ export default function Projects() {
   }
 
   return (
+    // Sección de Proyectos
     <section id="projects" className="py-20 bg-slate-950 px-4 scroll-mt-18 border-t border-slate-800">
       <h2 className="text-4xl font-bold text-white text-center mb-12">
         Mis <span className="text-cyan-400 animate-wave">Proyectos</span>
       </h2>
-      
+      // Grid para mostrar los proyectos de forma responsiva 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {misProyectos.map((proyectos) => (
+          // Card para cada proyecto, con imagen, título, descripción y link a detalles
           <div key={proyectos.id} className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500/50 transition-all group">
             <div className="overflow-hidden">
                <img 

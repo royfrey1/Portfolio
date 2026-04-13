@@ -1,3 +1,5 @@
+// componente para mostrar las habilidades técnicas del desarrollador, con categorías y estilos modernos usando Tailwind CSS
+
 export default function Skills() {
   const skills = [
     { name: "React", category: "Frontend" },

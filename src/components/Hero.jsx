@@ -1,6 +1,7 @@
 export default function Hero() {
   return (
     <section className="flex flex-col items-center justify-center py-20 text-center bg-slate-900">
+      {/* Seccion de bienvenida o presentación */}
       <h1 className="text-6xl font-extrabold text-white tracking-tight mb-4">
         Hola, soy <span className="text-cyan-400 animate-wave">Roy Frey</span>
       </h1>

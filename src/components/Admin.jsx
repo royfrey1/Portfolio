@@ -1,5 +1,5 @@
-const AdminContableComponent = () => {
-  return (
+export default function Admin() {
+  return ( 
     <div className="bg-slate-900/50 border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-500/50 transition-all">
       <div className="flex justify-between items-start mb-6">
         <div>
@@ -10,7 +10,7 @@ const AdminContableComponent = () => {
           DATA-DRIVEN
         </span>
       </div>
-
+ 
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="bg-slate-800/50 p-4 rounded-xl">
           <p className="text-slate-500 text-xs uppercase">Conciliaciones</p>

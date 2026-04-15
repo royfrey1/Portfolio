@@ -1,6 +1,6 @@
 export default function IA() {
  return (
-    <div className="bg-slate-900/50 border border-emerald-500/20 rounded-3xl p-8 hover:border-emerald-500/50 transition-all shadow-xl">
+    <div className="bg-[#050810] border border-emerald-500/20 rounded-3xl p-8 hover:border-emerald-500/50 transition-all shadow-xl">
       <div className="flex justify-between items-start mb-6">
         <div>
           <h4 className="text-2xl font-bold text-white">Experiencia con IA</h4>

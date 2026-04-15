@@ -14,6 +14,7 @@ export default function Navbar() {
           <a href="#" className="hover:text-cyan-400 transition-colors">Inicio</a>
           <a href="#projects" className="hover:text-cyan-400 transition-colors">Proyectos</a>
           <a href="#contacto" className="hover:text-cyan-400 transition-colors">Contacto</a>
+          <a href="#experiencia" className="hover:text-cyan-400 transition-colors">Habilidades</a>
         </div>
 
         {/* Botón descargar CV*/}

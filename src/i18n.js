@@ -3,32 +3,41 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
       es: {
         translation: {
-          title: "Analista de Sistemas & Administrador Contable",
-          ia_section: "Experiencia con IA",
-          exp_hybrid: "Trayectoria Híbrida"
+          nav_inicio: "Inicio",
+          nav_proyectos: "Proyectos",
+          nav_habilidades: "Habilidades",
+          nav_contacto: "Contacto",
+          download_cv: "Descargar CV",
+          title: "Analista de Sistemas & Administrador Contable" // [cite: 2]
         }
       },
       en: {
         translation: {
-          title: "Systems Analyst & Accounting Administrator",
-          ia_section: "AI Experience",
-          exp_hybrid: "Hybrid Career"
+          nav_inicio: "Home",
+          nav_proyectos: "Projects",
+          nav_habilidades: "Skills",
+          nav_contacto: "Contact",
+          download_cv: "Download CV",
+          title: "Systems Analyst & Accounting Admin" // [cite: 2]
         }
       },
       pt: {
         translation: {
-          title: "Analista de Sistemas e Administrador Contábil",
-          ia_section: "Experiência com IA",
-          exp_hybrid: "Trajetória Híbrida"
+          nav_inicio: "Início",
+          nav_proyectos: "Projetos",
+          nav_habilidades: "Habilidades",
+          nav_contacto: "Contato",
+          download_cv: "Baixar CV",
+          title: "Analista de Sistemas e Administrador Contábil" // [cite: 2]
         }
       }
     },
+    lng: "es", // Idioma inicial
     fallbackLng: "es",
     interpolation: { escapeValue: false }
   });

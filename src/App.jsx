@@ -5,6 +5,7 @@ import Navbar from './components/NavBar'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Admin from './components/Admin'
+import Atencion from './components/Atencion'
 import ScrollToTop from './components/ScrolltoTop'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Skills />
       <Projects />
       <Admin/>  
+      <Atencion/>
       <Contact />
       <Footer />
       <ScrollToTop />

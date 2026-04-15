@@ -48,8 +48,7 @@ export default function Projects() {
     <section id="projects" className="py-20 bg-slate-950 px-4 scroll-mt-18 border-t border-slate-800">
       <h2 className="text-4xl font-bold text-white text-center mb-12">
         Mis <span className="text-cyan-400 animate-wave">Proyectos</span>
-      </h2>
-      // Grid para mostrar los proyectos de forma responsiva 
+      </h2> 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {misProyectos.map((proyectos) => (
           // Card para cada proyecto, con imagen, título, descripción y link a detalles

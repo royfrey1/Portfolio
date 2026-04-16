@@ -45,7 +45,7 @@ export default function Projects() {
       </section>
     );
   }
-
+  console.log("Data de Supabase:", misProyectos);
   return (
     // Sección de Proyectos
     <section id="projects" className="py-20 bg-slate-950 px-4 scroll-mt-18 border-t border-slate-800">
@@ -78,7 +78,6 @@ export default function Projects() {
           </div>
         ))}
       </div>
-    console.log("Data de Supabase:", proyectos);
     </section>
   );
 }

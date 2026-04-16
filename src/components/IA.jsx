@@ -6,7 +6,7 @@ const { t } = useTranslation();
     <div className="bg-slate-900/50 border border-emerald-500/20 rounded-3xl p-8 hover:border-emerald-500/50 transition-all shadow-xl">
       <div className="flex justify-between items-start mb-6">
         <div>
-          <h4 className="text-2xl font-bold text-white">{t('title')}</h4>
+          <h4 className="text-2xl font-bold text-white">{t('IA_title', 'Experiencia con IA')}</h4>
           <p className="text-emerald-500 font-medium italic">Especialista en inteligencia artificial aplicada</p>
         </div>
         <div className="text-right">

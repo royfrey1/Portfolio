@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient'; 
+import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
+  //definir la función de traducción para usar las claves del archivo de traducciones y mostrar el texto en el idioma seleccionado
+  const { t } = useTranslation();
   // definir estado - array vacío para guardar los proyectos que traemos de Supabase
   const [misProyectos, setMisProyectos] = useState([]);
   const [cargando, setCargando] = useState(true);
@@ -38,7 +41,7 @@ export default function Projects() {
   if (cargando) {
     return (
       <section className="py-20 bg-slate-950 text-center">
-        <p className="text-cyan-400 animate-pulse">Cargando proyectos desde la base de datos...</p>
+        <p className="text-cyan-400 animate-pulse">{t('project_loading', 'Cargando proyectos desde la base de datos...')}</p>
       </section>
     );
   }
@@ -47,7 +50,7 @@ export default function Projects() {
     // Sección de Proyectos
     <section id="projects" className="py-20 bg-slate-950 px-4 scroll-mt-18 border-t border-slate-800">
       <h2 className="text-4xl font-bold text-white text-center mb-12">
-        Mis <span className="text-cyan-400 animate-wave">Proyectos</span>
+        {t('project_title', 'Mis')} <span className="text-cyan-400 animate-wave">{t('project_title_2', 'Proyectos')}</span>
       </h2> 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {misProyectos.map((proyectos) => (
@@ -69,7 +72,7 @@ export default function Projects() {
                 href={proyectos.link} 
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm transition-colors"
               >
-                Ver más detalles <span className="ml-2">→</span>
+                {t('project_details', 'Ver más detalles')}<span className="ml-2">→</span>
               </a>
             </div>
           </div>

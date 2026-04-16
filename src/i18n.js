@@ -28,11 +28,14 @@ i18n
             stack_backend_category: "Backend",
             stack_data_category: "Data",
 // Projects Section
-            project_title: "Mis Proyectos",
+            project_title: "Mis",
+            project_title_2: "Proyectos",
             project_desc_1: "Proyecto de página Web responsiva para un atractivo turístico, La Aripuca.",
             project_desc_2: "Juego de adivinanza de números usando React, con lógica de juego e interface interactiva.",
             project_desc_3: "Diseño de esta página web usando Tailwind CSS, con un diseño moderno y responsivo.",
             project_details: "Ver más detalles",
+            project_loading: "Cargando proyectos desde la base de datos...",
+
 // Experiencia Section
             exp_contable_title_1: "Experiencia Híbrida",
             exp_desc: "Combinando el rigor del análisis contable con la empatía de la atención al público y el poder del desarrollo de sistemas.",
@@ -89,11 +92,13 @@ i18n
             stack_backend_category: "Backend",
             stack_data_category: "Data",
 // Projects Section
-            project_title: "My Projects",
+            project_title: "My",
+            project_title_2: "Projects",
             project_desc_1: "Responsive website project for a tourist attraction, La Aripuca.",
             project_desc_2: "Number guessing game using React, with game logic and interactive interface.",
             project_desc_3: "Design of this website using Tailwind CSS, with a modern and responsive design.",
             project_details: "View more details",
+            project_loading: "Loading projects from the database...",
 // Experiencia Section
             exp_contable_title_1: "Hybrid path",
             exp_desc: "Combining the rigor of accounting analysis with the empathy of customer service and the power of systems development.",
@@ -150,11 +155,13 @@ i18n
             stack_backend_category: "Backend",
             stack_data_category: "Data",
 // Projects Section
-            project_title: "Meus Projetos",
+            project_title: "Meus ",
+            project_title_2: "Projetos",
             project_desc_1: "Projeto de pagina Web responsiva para um atrativo turistico, La Aripuca.",
             project_desc_2: "Jogo de adivinhação de números usando React, com lógica de jogo e interface interativa.",
             project_desc_3: "Disenho de essa pagina web usando Tailwind CSS, con un diseño moderno y responsivo.",
             project_details: "Ver mas detalhes",
+            project_loading: "Carregando projetos do banco de dados...",
 // Experiencia Section
             exp_contable_title_1: "Administração e Gestão",
             exp_desc: "Combinando o rigor da análise contabilística com a empatia da atenção ao público e a potência do desenvolvimento de sistemas.",

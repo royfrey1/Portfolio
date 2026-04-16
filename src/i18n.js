@@ -15,7 +15,7 @@ i18n
             nav_contacto: "Contacto",
             download_cv: "Descargar CV",
 // Hero Section
-            hero_title: "Hola, soy ",
+            hero_title: "Hola, soy",
             hero_title_2: "Roy Frey",
             hero_p: "Analista de Sistemas & Desarrollador Fullstack. Especializado en crear soluciones eficientes con React y arquitectura AWS.",
             hero_lugar: "Puerto iguazu, Misiones, Argentina.",
@@ -80,7 +80,8 @@ i18n
             nav_contacto: "Contact",
             download_cv: "Download CV",
 // Hero Section
-            hero_title: "Hi, I'm Roy Frey",
+            hero_title: "Hi, I'm",
+            hero_title_2: "Roy Frey",
             hero_p: "Systems Analyst & Fullstack Developer. Specialized in creating efficient solutions with React and AWS architecture.",
             hero_lugar: "Puerto iguazu, Misiones, Argentina.",
             hero_btn_proyectos: "View Projects",
@@ -143,7 +144,8 @@ i18n
             nav_contacto: "Contato",
             download_cv: "Baixar CV",
 // Hero Section
-            hero_title: "Olá, sou Roy Frey",
+            hero_title: "Olá, sou",
+            hero_title_2: "Roy Frey",
             hero_p: "Analista de Sistemas & Desenvolvedor Fullstack. Especializado em criar soluções eficientes com React e arquitetura AWS.",
             hero_lugar: "Puerto iguazu, Misiones, Argentina.",
             hero_btn_proyectos: "Ver Projetos",

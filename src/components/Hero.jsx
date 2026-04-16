@@ -8,7 +8,10 @@ export default function Hero() {
     <section className="flex flex-col items-center justify-center py-20 text-center bg-slate-900">
       {/* Seccion de bienvenida o presentación */}
       <h1 className="text-6xl font-extrabold text-white tracking-tight mb-4">
-        {t('hero_title', 'Hola, soy')} <span className="text-cyan-400 animate-wave">{t('hero_title_2', 'Roy Frey')}</span>
+        {t('hero_title', 'Hola, soy')}{' '}
+        <span className="text-cyan-400 animate-wave">
+        {t('hero_title_2', 'Roy Frey')}
+        </span>
       </h1>
       <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-8">
         {t('hero_p', 'Analista de Sistemas & Desarrollador Fullstack. Especializado en crear soluciones eficientes con React y arquitectura AWS.')}

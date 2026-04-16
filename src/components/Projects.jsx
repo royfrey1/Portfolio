@@ -66,7 +66,7 @@ export default function Projects() {
             <div className="p-6">
               <h3 className="text-xl font-bold text-white mb-2">{proyectos.titulo}</h3>
               <p className="text-slate-400 text-sm mb-4 leading-relaxed">
-                {proyectos.descripcion}
+                {proyectos[`descripcion_${t.language}`] || proyectos.descripcion_es}
               </p>
               <a 
                 href={proyectos.link} 
@@ -78,6 +78,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
+    console.log("Data de Supabase:", proyectos);
     </section>
   );
 }

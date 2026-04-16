@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
   //definir la función de traducción para usar las claves del archivo de traducciones y mostrar el texto en el idioma seleccionado
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   // definir estado - array vacío para guardar los proyectos que traemos de Supabase
   const [misProyectos, setMisProyectos] = useState([]);
   const [cargando, setCargando] = useState(true);
@@ -45,7 +45,7 @@ export default function Projects() {
       </section>
     );
   }
-  console.log("Data de Supabase:", misProyectos);
+
   return (
     // Sección de Proyectos
     <section id="projects" className="py-20 bg-slate-950 px-4 scroll-mt-18 border-t border-slate-800">
@@ -65,9 +65,18 @@ export default function Projects() {
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-white mb-2">{proyectos.titulo}</h3>
-              <p className="text-slate-400 text-sm mb-4 leading-relaxed">
-                {proyectos[`descripcion_${t.language}`] || proyectos.descripcion_es}
+             {/*  <p className="text-slate-400 text-sm mb-4 leading-relaxed">
+                {proyectos[`descripcion_${t.language}`] || proyectos.descripcion}
               </p>
+              */}
+
+              <p className="text-slate-400 text-sm mb-4 leading-relaxed">
+                {i18n.language === 'es' 
+                  ? proyectos.descripcion 
+                  : (proyectos[`descripcion_${i18n.language}`] || proyectos.descripcion)
+                }
+              </p>
+
               <a 
                 href={proyectos.link} 
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm transition-colors"

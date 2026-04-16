@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next';
+
+
 export default function Hero() {
+  const { t } = useTranslation();
   return (
     <section className="flex flex-col items-center justify-center py-20 text-center bg-slate-900">
       {/* Seccion de bienvenida o presentación */}

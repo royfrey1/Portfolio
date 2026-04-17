@@ -57,7 +57,7 @@ export default function Navbar() {
                 className="text-2xl hover:scale-125 transition-transform" 
                 >
                 <img 
-                  src={`https://flagcdn.com/16x12/${idioma.country}.png`} 
+                  src={`https://flagcdn.com/w40/${idioma.country}.png`} 
                   alt={idioma.label}
                   className={`w-6 h-auto rounded-sm shadow-sm ${
                   i18n.language === idioma.code ? 'grayscale-0 border border-cyan-400' : 'grayscale opacity-40 hover:opacity-100'

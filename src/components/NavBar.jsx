@@ -33,18 +33,21 @@ export default function Navbar() {
           </a>
 
           {/* Selector de Idiomas integrado */}
-          <div className="flex gap-2 ml-4 border-l border-slate-800 pl-6">
-            {['es', 'en', 'pt'].map((lng) => (
+          <div className="flex items-center gap-2 border-l border-slate-700 pl-4">
+            {[
+              { code: 'es', flag: '🇦🇷', label: 'Español' },
+              { code: 'en', flag: '🇺🇸', label: 'English' },
+              { code: 'pt', flag: '🇧🇷', label: 'Português' }  
+              ].map((lng) => (
               <button
                 key={lng}
                 onClick={() => changeLanguage(lng)}
-                className={`px-2 py-1 text-[10px] font-bold rounded transition-all ${
-                  i18n.language === lng 
-                  ? 'bg-cyan-500/20 border border-cyan-500 text-cyan-400' 
-                  : 'text-slate-500 hover:text-white border border-transparent'
+                title={lng.label}
+                className={`text-2xl hover:scale-125 transition-transform ${
+                i18n.language === lng.code ? 'grayscale-0 brightness-110' : 'grayscale-[0.5] opacity-70 hover:opacity-100'
                 }`}
               >
-                {lng.toUpperCase()}
+                {lng.flag}
               </button>
             ))}
           </div>

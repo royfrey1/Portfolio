@@ -44,7 +44,7 @@ export default function Navbar() {
           </a>
 
           {/* Selector de Idiomas - Ahora a la derecha del CV */}
-          <div className="flex items-center gap-2 border-l border-slate-700 pl-4 w-6 h-4">
+          <div className="flex items-center gap-2 border-l border-slate-700 pl-4 w-6">
             {[
               { code: 'es', country: 'ar', label: 'Español' },
               { code: 'en', country: 'us', label: 'English' },

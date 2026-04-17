@@ -46,9 +46,9 @@ export default function Navbar() {
           {/* Selector de Idiomas - Ahora a la derecha del CV */}
           <div className="flex items-center gap-2 border-l border-slate-700 pl-4">
             {[
-              { code: 'es', country: '🇦🇷', label: 'Español' },
-              { code: 'en', country: '🇺🇸', label: 'English' },
-              { code: 'pt', country: '🇧🇷', label: 'Português' }  
+              { code: 'es', country: 'ar', label: 'Español' },
+              { code: 'en', country: 'us', label: 'English' },
+              { code: 'pt', country: 'br', label: 'Português' }  
             ].map((idioma) => (
               <button
                 key={idioma.code}
@@ -57,7 +57,7 @@ export default function Navbar() {
                 className="text-2xl hover:scale-125 transition-transform" 
                 >
                 <img 
-                  src={`https://flagcdn.com/w40/${idioma.country}.png`} 
+                  src={`https://flagcdn.com/16x12/${idioma.country}.png`} 
                   alt={idioma.label}
                   className={`w-6 h-auto rounded-sm shadow-sm ${
                   i18n.language === idioma.code ? 'grayscale-0 border border-cyan-400' : 'grayscale opacity-40 hover:opacity-100'

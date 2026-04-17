@@ -38,7 +38,7 @@ const { t } = useTranslation();
             <div className="space-y-4 mb-8">
               <p className="text-slate-400 text-sm leading-relaxed">
                 {t('exp_contable_desc_admin', 'Gestión administrativa integral utilizando sistemas de alta demanda como ')} <span className="text-white">{t('exp_contable_program', 'Holistor y Alma.net')}</span>
-                {t('exp_contable_desc_admin', 'Gestión hotelera avanzada (Booking.com, RoomCloud, Expedia Group) y manejo del sistema TOTVS. Especialista en análisis de informes financieros y soporte técnico interno de sistemas.')}
+                {t('exp_contable_desc_admin2', 'Gestión hotelera avanzada (Booking.com, RoomCloud, Expedia Group) y manejo del sistema TOTVS. Especialista en análisis de informes financieros y soporte técnico interno de sistemas.')}
               </p>
             </div>
 

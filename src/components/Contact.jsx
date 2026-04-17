@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from '../i18n';
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   return (
     /* Seccion de contacto */
     <section id="contacto" className="py-20 bg-slate-900 px-4 scroll-mt-18">

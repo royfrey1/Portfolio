@@ -37,7 +37,7 @@ export default function ScrollToTop() {
         onClick={scrollToTop}
         className={`
           ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}
-          btn-rainbow bg-cyan-500 hover:bg-cyan-600 text-slate-950 p-3 rounded-full shadow-lg shadow-cyan-500/30
+          btn-rainbow bg-cyan-500 hover:btn-rainbow text-slate-950 p-3 rounded-full shadow-lg shadow-cyan-500/30
           transition-all duration-300 ease-in-out transform hover:scale-110
         `}
       >

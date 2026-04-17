@@ -86,6 +86,9 @@ export default function Contact() {
                     placeholder= {t('contact_message_placeholder', 'Escribe tu mensaje aquí')}
                     ></textarea>
             </div>
+
+            <input type="text" name="_gotcha" style={{ display: 'none' }} />
+
             <button type="submit" className="w-full bg-cyan-500 border-slate-700 text-slate-300 px-6 py-3 font-medium rounded-lg btn-rainbow transition-all">
                     {t('contact_btn', 'Enviar Mensaje')}
             </button>

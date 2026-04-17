@@ -11,6 +11,7 @@ export default function Skills() {
     { name: "Python", category: t('stack_backend_category', 'Backend') },
     { name: "SQL", category: t('stack_data_category', 'Data') },
     { name: "AWS (EC2/S3)", category: t('stack_cloud_category', 'Cloud') },
+    { name: "Git & GitHub", category: t('stack_tools_category', 'Herramientas') },
   ];
 
   return (

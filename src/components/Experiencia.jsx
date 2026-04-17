@@ -7,7 +7,7 @@ const { t } = useTranslation();
     <section id='experiencia' className="max-w-7xl mx-auto px-8 py-24 bg-[#050810]">
       <div className="flex flex-col items-center mb-16 text-center">
         <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter">
-          {t('exp_contable_title_1', 'Experiencia')} <span className="text-emerald-500">{t('exp_contable_title_2', 'Híbrida')}</span>
+          {t('exp_contable_title_1', 'Experiencia')} <span className="text-emerald-500 animate-pulse">{t('exp_contable_title_2', 'Híbrida')}</span>
         </h2>
         <div className="h-1.5 w-24 bg-gradient-to-r from-emerald-500 to-blue-500 mt-4 rounded-full"></div>
         <p className="mt-6 text-slate-400 max-w-2xl text-lg">

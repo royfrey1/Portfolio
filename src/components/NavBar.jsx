@@ -59,7 +59,7 @@ export default function Navbar() {
                 <img 
                   src={`https://flagcdn.com/w80/${idioma.country}.png`} 
                   alt={idioma.label}
-                  className={`w-6 h-auto rounded-sm shadow-sm ${
+                  className={`w-6 h-4 rounded-sm shadow-sm object-cover ${
                   i18n.language === idioma.code ? 'grayscale-0 border border-cyan-400' : 'grayscale opacity-40 hover:opacity-100'
                 }`}
                 />

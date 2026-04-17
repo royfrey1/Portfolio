@@ -46,19 +46,23 @@ export default function Navbar() {
           {/* Selector de Idiomas - Ahora a la derecha del CV */}
           <div className="flex items-center gap-2 border-l border-slate-700 pl-4">
             {[
-              { code: 'es', flag: '🇦🇷', label: 'Español' },
-              { code: 'en', flag: '🇺🇸', label: 'English' },
-              { code: 'pt', flag: '🇧🇷', label: 'Português' }  
+              { code: 'es', country: '🇦🇷', label: 'Español' },
+              { code: 'en', country: '🇺🇸', label: 'English' },
+              { code: 'pt', country: '🇧🇷', label: 'Português' }  
             ].map((idioma) => (
               <button
                 key={idioma.code}
                 onClick={() => changeLanguage(idioma.code)}
                 title={idioma.label}
-                className={`text-2xl hover:scale-125 transition-transform ${
-                  i18n.language === idioma.code ? 'grayscale-0 brightness-110' : 'grayscale opacity-50 hover:opacity-100'
+                className="text-2xl hover:scale-125 transition-transform" 
+                >
+                <img 
+                  src={`https://flagcdn.com/w40/${idioma.country}.png`} 
+                  alt={idioma.label}
+                  className={`w-6 h-auto rounded-sm shadow-sm ${
+                  i18n.language === idioma.code ? 'grayscale-0 border border-cyan-400' : 'grayscale opacity-40 hover:opacity-100'
                 }`}
-              >
-                {idioma.flag}
+                />
               </button>
             ))}
           </div>

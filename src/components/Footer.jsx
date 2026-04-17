@@ -13,7 +13,7 @@ export default function Footer() {
         
         {/* Título */}
         <p className="text-slate-500 text-xs mb-6 uppercase tracking-widest">
-          Analista de Sistemas, Administrador Contable & Cloud Enthusiast
+          {t('footer_description', 'Analista de Sistemas, Administrador Contable & Cloud Enthusiast')}
         </p>
 
         {/* Separador */}
@@ -21,13 +21,13 @@ export default function Footer() {
 
         {/* Copyright y Ubicación */}
         <div className="text-slate-500 text-xs space-y-2">
-          <p>© {year} - Diseñado y desarrollado por Roy Frey</p>
+          <p>© {year} - {t('footer_desing', 'Diseñado y desarrollado por Roy Frey')}</p>
           <p className="flex justify-center items-center gap-2 text-slate-600">
-            <span>Iguazu, Misiones, Argentina</span>
+            <span>Iguazu, Misiones, Argentina</span> 
             <span className="w-1 h-1 bg-slate-700 rounded-full"></span>
-            <span>Remoto para el mundo</span>
+            <span>{t('footer_remoto', 'Remoto para el mundo')}</span>
           </p>
-        </div>
+        </div> 
       </div>
     </footer>
   );

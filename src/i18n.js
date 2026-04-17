@@ -8,7 +8,7 @@ i18n
     resources: {
       es: {
         translation: {
-          // Navbar            
+// Navbar            
             nav_inicio: "Inicio",
             nav_proyectos: "Proyectos",
             nav_habilidades: "Habilidades",
@@ -50,14 +50,18 @@ i18n
             exp_contable_desc_atencion: "Experiencia directa en",
             exp_contable_desc_atencion2: "atención al público y manejo de valores.",
             exp_contable_desc_atencion3: "Foco en la resolución de consultas críticas y fidelización, clave para el relevamiento de requerimientos como Analista.",
-  // IA Section
+// IA Section
             ia_title: "Experiencia con IA",
             ia_expertise: "Experiencia en inteligencia artificial aplicada",
-            ia_expertise_desc: "Uso integral de IA (Gemini, ChatGPT, Claude) en tareas contables.",
+            ia_expertise_desc: "Uso integral de IA  ",
+            ia_expertise_desc2: "(Gemini, ChatGPT, Claude)",
+            ia_expertise_desc3: " en tareas contables.",
+            ia_expertise_title: "Expertise Tecnico",
             ia_business: "IA Aplicada a Negocios",
-            ia_business_desc: "Integrando herramientas de IA Generativa para acelerar el desarrollo de software.",
-            ia_logros_1: "Abordaje estratégico para resolver problemas técnicos y arquitectónicos con escalabilidad.",
-            ia_logros_2: "Ingeniería de prompts avanzada para automatizar código en Python y React, realizar depuración profunda de arquitecturas en la nube como AWS y optimizar la lógica de negocios complejos.",
+            ia_business_desc: "Como analista de sistemas, integro herramientas de IA Generativa para acelerar el desarrollo de software.",
+            ia_logros_title: "Logros Claves:",
+            ia_logros_1: "Mi enfoque no se limita al uso superficial de la IA, sino a su implementación estratégica para resolver problemas técnicos y arquitectónicos con precisión y escalabilidad.",
+            ia_logros_2: "Poseo una sólida capacidad para el diseño de prompts avanzados (Prompt Engineering), lo que me permite automatizar la escritura de código limpio en Python y React, realizar debugging profundo de arquitecturas en la nube como AWS y optimizar la lógica de negocios compleja.",
 // Contact Section 
             contact_title: "Hablamos?",
             contact_desc: "¿Tienes un proyecto en mente o buscas sumar a alguien a tu equipo? ¡Escríbeme!",
@@ -114,17 +118,21 @@ i18n
             exp_contable_atencion: "Customer Service",
             exp_contable_atencion2: "Minimarket Miguelo",
             exp_contable_desc_admin: "Comprehensive administrative management using high-demand systems such as ",
-            exp_contable_desc_admin2: "Advanced hotel management (Booking.com, RoomCloud, Expedia Group) and TOTVS system management. Specialist in financial report analysis and internal systems technical support.",
+            exp_contable_desc_admin2: " Advanced hotel management (Booking.com, RoomCloud, Expedia Group) and TOTVS system management. Specialist in financial report analysis and internal systems technical support.",
             exp_contable_program: "Holistor and Alma.net.",
             exp_contable_desc_atencion: "Direct experience in ",
             exp_contable_desc_atencion2: "customer service and handling valuables.",
             exp_contable_desc_atencion3: "Focus on resolving critical inquiries and building customer loyalty, key to gathering requirements as an Analyst.",
-            // IA Section
+// IA Section
             ia_title: "Experience with IA",
             ia_expertise: "Specialist in applied artificial intelligence",
-            ia_expertise_desc: "Comprehensive use of AI (Gemini, ChatGPT, Claude) in accounting tasks.",
+            ia_expertise_desc: "Comprehensive use of AI ",
+            ia_expertise_desc2: "(Gemini, ChatGPT, Claude)",
+            ia_expertise_desc3: " in accounting tasks.",
+            ia_expertise_title: "Technical Expertise",
             ia_business: "IA Applied to Business",
-            ia_business_desc: "Integrating Generative AI tools to accelerate software development.",
+            ia_business_desc: "Integrating Generative AI tools to accelerate software development.",            
+            ia_logros_title: "Key Achievements:",
             ia_logros_1: "Strategic approach to solving technical and architectural problems with scalability in mind.",
             ia_logros_2: "Advanced prompt engineering to automate code in Python and React, perform deep debugging of cloud architectures like AWS, and optimize complex business logic.",
 // Contact Section
@@ -191,9 +199,13 @@ i18n
 // IA Section
             ia_title: "Experiência com IA",
             ia_expertise: "Experiência em inteligência artificial aplicada",
-            ia_expertise_desc: "Uso integral de IA (Gemini, ChatGPT, Claude) em tarefas contábeis.",
+            ia_expertise_title: "Expertise Tecnico",
+            ia_expertise_desc: "Uso integral de IA ",
+            ia_expertise_desc2: "(Gemini, ChatGPT, Claude)",
+            ia_expertise_desc3: " em tarefas contábeis.",
             ia_business: "IA Aplicada a Negócios",
             ia_business_desc: "Integrando ferramentas de IA Generativa para acelerar o desenvolvimento de software.",
+            ia_logros_title: "Logros Clave:",
             ia_logros_1: "Abordagem estratégica para resolver problemas técnicos e arquitetônicos com escalabilidade.",
             ia_logros_2: "Engenharia de prompts avançada para automatizar código em Python e React, realizar depuração profunda de arquiteturas na nuvem como AWS e otimizar a lógica de negócios complexos.",
 // Contact Section

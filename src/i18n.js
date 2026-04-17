@@ -37,15 +37,19 @@ i18n
             project_loading: "Cargando proyectos desde la base de datos...",
 
 // Experiencia Section
-            exp_contable_title_1: "Experiencia Híbrida",
+            exp_contable_title_1: "Trayectoria",
+            exp_contable_title_2: "Hibrida",
             exp_desc: "Combinando el rigor del análisis contable con la empatía de la atención al público y el poder del desarrollo de sistemas.",
             exp_contable_admin: "Administración y Gestión",
             exp_contable_admin2: "Estudio contable",
             exp_contable_atencion: "Atención al Cliente",
             exp_contable_atencion2: "Minimercado Miguelo",
-            exp_contable_desc_admin: "Gestión administrativa integral utilizando sistemas de alta demanda como Holistor y Alma.net. Gestión hotelera avanzada (Booking.com, RoomCloud, Expedia Group) y manejo del sistema TOTVS. Especialista en análisis de informes financieros y soporte técnico interno de sistemas.",
-            exp_contable_desc_atencion: "Experiencia directa en atención al público y manejo de valores. Enfoque en la resolución de consultas críticas y fidelización, clave para la relevancia de requisitos como Analista.",
-// IA Section
+            exp_contable_desc_admin: "Gestión administrativa integral utilizando sistemas de alta demanda como. Gestión hotelera avanzada (Booking.com, RoomCloud, Expedia Group) y manejo del sistema TOTVS. Especialista en análisis de informes financieros y soporte técnico interno de sistemas.",
+            exp_contable_program: "Holistor y Alma.net",
+            exp_contable_desc_atencion: "Experiencia directa en",
+            exp_contable_desc_atencion2: "atención al público y manejo de valores.",
+            exp_contable_desc_atencion3: "Foco en la resolución de consultas críticas y fidelización, clave para el relevamiento de requerimientos como Analista.",
+  // IA Section
             ia_title: "Experiencia con IA",
             ia_expertise: "Experiencia en inteligencia artificial aplicada",
             ia_expertise_desc: "Uso integral de IA (Gemini, ChatGPT, Claude) en tareas contables.",
@@ -101,7 +105,8 @@ i18n
             project_details: "View more details",
             project_loading: "Loading projects from the database...",
 // Experiencia Section
-            exp_contable_title_1: "Hybrid path",
+            exp_contable_title_1: "Hybrid",
+            exp_contable_title_2: "Path",
             exp_desc: "Combining the rigor of accounting analysis with the empathy of customer service and the power of systems development.",
             exp_contable_admin: "Administration and Management",
             exp_contable_admin2: "Accounting Firm",
@@ -165,7 +170,8 @@ i18n
             project_details: "Ver mas detalhes",
             project_loading: "Carregando projetos do banco de dados...",
 // Experiencia Section
-            exp_contable_title_1: "Administração e Gestão",
+            exp_contable_title_1: "Experiência",
+            exp_contable_title_2: "Híbrida",
             exp_desc: "Combinando o rigor da análise contabilística com a empatia da atenção ao público e a potência do desenvolvimento de sistemas.",
             exp_contable_admin: "Administração e Gestão",
             exp_contable_admin2: "Estúdio contável",

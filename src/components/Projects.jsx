@@ -65,11 +65,6 @@ export default function Projects() {
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-white mb-2">{proyectos.titulo}</h3>
-             {/*  <p className="text-slate-400 text-sm mb-4 leading-relaxed">
-                {proyectos[`descripcion_${t.language}`] || proyectos.descripcion}
-              </p>
-              */}
-
               <p className="text-slate-400 text-sm mb-4 leading-relaxed">
                 {i18n.language === 'es' 
                   ? proyectos.descripcion 

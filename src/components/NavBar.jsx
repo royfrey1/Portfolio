@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, {useState} from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
@@ -58,16 +59,21 @@ export default function Navbar() {
               )}
             </svg>
           </button>
-
-
-
-
-
-
+          {/* Banderas Desktop (Ocultas en móvil para que no se amontonen) */}
+          <div className="hidden md:flex items-center gap-2 border-l border-slate-700 pl-4">
+            {[{ code: 'es', f: 'ar' }, { code: 'en', f: 'us' }, { code: 'pt', f: 'br' }].map((lang) => (
+              <button key={lang.code} onClick={() => changeLanguage(lang.code)}>
+                <img 
+                  src={`https://flagcdn.com/w40/${lang.f}.png`} 
+                  className={`w-6 h-auto ${i18n.language === lang.code ? 'grayscale-0' : 'grayscale opacity-50'}`} 
+                />
+              </button>
+            ))}
+          </div>
 
 
           {/* Selector de Idiomas - Ahora a la derecha del CV */}
-          <div className="flex items-center gap-2 border-l border-slate-700 pl-4">
+          {/* <div className="flex items-center gap-2 border-l border-slate-700 pl-4">
             {[
               { code: 'es', country: 'ar', label: 'Español' },
               { code: 'en', country: 'us', label: 'English' },
@@ -86,6 +92,31 @@ export default function Navbar() {
                   i18n.language === idioma.code ? 'grayscale-0 border border-cyan-400' : 'grayscale opacity-40 hover:opacity-100'
                 }`}
                 />
+              </button>
+            ))}
+          </div> */}
+        </div>
+      </div>
+      {/* Menú Móvil (Overlay) */}
+      <div className={`fixed inset-0 bg-slate-950 transition-transform duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
+        <div className="flex flex-col items-center justify-center h-full gap-8 text-2xl text-white">
+          <a href="#" onClick={() => setIsOpen(false)}>{t('nav_inicio', 'Inicio')}</a>
+          <a href="#projects" onClick={() => setIsOpen(false)}>{t('nav_proyectos', 'Proyectos')}</a>
+          <a href="#experiencia" onClick={() => setIsOpen(false)}>{t('nav_habilidades', 'Habilidades')}</a>
+          <a href="#contacto" onClick={() => setIsOpen(false)}>{t('nav_contacto', 'Contacto')}</a>
+          
+          {/* Banderas en Menú Móvil */}
+          <div className="flex gap-6 mt-4">
+            {[
+              { code: 'es', country: 'ar', label: 'Español' },
+              { code: 'en', country: 'us', label: 'English' },
+              { code: 'pt', country: 'br', label: 'Português' }
+            ].map((idioma) => (
+              <button 
+              key={idioma.code} 
+              onClick={() => changeLanguage(idioma.code)} 
+              className="scale-150">
+                <img src={`https://flagcdn.com/w40/${idioma.country}.png`} className="w-8" />
               </button>
             ))}
           </div>

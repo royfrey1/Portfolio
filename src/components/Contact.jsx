@@ -79,6 +79,20 @@ export default function Contact() {
                 />
             </div>
             <div>
+                <label className="text-white block mb-2">{t('contact_subject', 'Motivo del contacto')}</label>
+                    <select 
+                        name="subject" 
+                        className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:border-cyan-400 outline-none transition-colors"
+                    >
+                        <option value="Trabajo">{t('opt_work', 'Propuesta Laboral')}</option>
+                        <option value="Consulta">{t('opt_query', 'Consulta General')}</option>
+                        <option value="Error">{t('opt_bug', 'Reportar un error en la página')}</option>
+                    </select>
+            </div>
+
+
+
+            <div>
                 <label className="block text-slate-300 mb-2 text-sm">{t('contact_message', 'Mensaje')}</label>
                 <textarea 
                     name="message" // IMPORTANTE: Agregamos el atributo name

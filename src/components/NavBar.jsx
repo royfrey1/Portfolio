@@ -82,11 +82,11 @@ export default function Navbar() {
 
       {/* Menú Móvil (Overlay) */}
       <div 
-        className={`fixed inset-0 h-screen w-full bg-[#020617] transition-all duration-300 ease-in-out transform ${
+        className={`fixed inset-0 h-screen w-full bg-[#020617]/98 transition-all duration-300 ease-in-out transform ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden z-[100]`}
       >
-        {/* Detalle de diferenciación: Un borde lateral con brillo para separar del fondo principal */}
+        {/* borde lateral con brillo para separar del fondo principal */}
         <div className="absolute inset-y-0 left-0 w-1 bg-cyan-500 shadow-[0_0_15px_rgba(34,211,238,0.5)]"></div>
 
         <div className="flex flex-col h-full w-full relative">

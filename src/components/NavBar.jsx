@@ -81,8 +81,8 @@ export default function Navbar() {
       </div>
 
       {/* Menú Móvil (Overlay) */}
-      <div className={`fixed inset-0 bg-slate-950/98 transition-transform duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden z-40`}>
-        <div className="flex flex-col items-center justify-center h-full pt-32 pb-12 gap-8 text-2xl text-white">
+      <div className={`fixed inset-0 bg-slate-950/98 transition-transform duration-200 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden z-40`}>
+        <div className="flex flex-col items-center justify-center h-full w-full text-white">
           <a href="#" className="hover:text-cyan-400 transition-colors" onClick={() => setIsOpen(false)}>{t('nav_inicio', 'Inicio')}</a>
           <a href="#projects" className="hover:text-cyan-400 transition-colors" onClick={() => setIsOpen(false)}>{t('nav_proyectos', 'Proyectos')}</a>
           <a href="#experiencia" className="hover:text-cyan-400 transition-colors" onClick={() => setIsOpen(false)}>{t('nav_habilidades', 'Habilidades')}</a>

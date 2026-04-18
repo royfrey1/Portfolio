@@ -81,65 +81,72 @@ export default function Navbar() {
       </div>
 
       {/* Menú Móvil (Overlay) */}
-      {/* Menú Móvil (Overlay) */}
-      <div className={`fixed inset-0 bg-slate-950 transition-transform duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden z-[60]`}>
-        
-        {/* Contenedor principal con padding superior para no chocar con el logo */}
-        <div className="flex flex-col items-center justify-center h-full w-full px-6">
+      <div 
+        className={`fixed inset-0 h-screen w-full bg-[#020617] transition-all duration-300 ease-in-out transform ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        } md:hidden z-[100]`}
+      >
+        {/* Detalle de diferenciación: Un borde lateral con brillo para separar del fondo principal */}
+        <div className="absolute inset-y-0 left-0 w-1 bg-cyan-500 shadow-[0_0_15px_rgba(34,211,238,0.5)]"></div>
+
+        <div className="flex flex-col h-full w-full relative">
           
-          {/* Botón de cerrar en la esquina superior derecha */}
+          {/* Botón de cerrar en la parte superior derecha */}
           <button 
             onClick={() => setIsOpen(false)}
-            className="absolute top-6 right-6 text-slate-400 hover:text-white"
+            className="absolute top-6 right-6 text-white p-2 hover:bg-slate-900 rounded-full transition-colors"
           >
             <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
-          {/* Lista de links centrada */}
-          <div className="flex flex-col items-center gap-8 text-2xl font-semibold text-white">
-            <a href="#" onClick={() => setIsOpen(false)} className="hover:text-cyan-400 transition-colors">
-              {t('nav_inicio', 'Inicio')}
-            </a>
-            <a href="#projects" onClick={() => setIsOpen(false)} className="hover:text-cyan-400 transition-colors">
-              {t('nav_proyectos', 'Proyectos')}
-            </a>
-            <a href="#experiencia" onClick={() => setIsOpen(false)} className="hover:text-cyan-400 transition-colors">
-              {t('nav_habilidades', 'Habilidades')}
-            </a>
-            <a href="#contacto" onClick={() => setIsOpen(false)} className="hover:text-cyan-400 transition-colors">
-              {t('nav_contacto', 'Contacto')}
-            </a>
-
-            <div className="h-[1px] w-16 bg-slate-800 my-2"></div>
-
-            {/* Banderas */}
-            <div className="flex gap-10">
-              {idiomas.map((idioma) => (
-                <button 
-                  key={idioma.code} 
-                  onClick={() => changeLanguage(idioma.code)} 
-                  className={`transition-transform active:scale-90 ${i18n.language === idioma.code ? 'scale-150' : 'scale-110 opacity-40'}`}
-                >
-                  <img 
-                    src={`https://flagcdn.com/w80/${idioma.country}.png`} 
-                    className="w-10 rounded-sm shadow-2xl" 
-                    alt={idioma.label} 
-                  />
-                </button>
-              ))}
-            </div>
+          {/* Contenedor de links centrado matemáticamente */}
+          <div className="flex flex-col items-center justify-center flex-grow gap-10">
             
-            {/* Botón de CV también aquí para máxima visibilidad */}
-            <a 
-              href="/CV_Roy.pdf"
-              download
-              className="mt-4 bg-cyan-500 text-slate-950 px-6 py-2 rounded-md font-bold text-sm"
-              onClick={() => setIsOpen(false)}
-            >
-              {t('download_cv', 'Descargar CV')}
-            </a>
+            <nav className="flex flex-col items-center gap-8">
+              <a href="#" onClick={() => setIsOpen(false)} className="text-3xl text-white font-bold hover:text-cyan-400 transition-all active:scale-95">
+                {t('nav_inicio', 'Inicio')}
+              </a>
+              <a href="#projects" onClick={() => setIsOpen(false)} className="text-3xl text-white font-bold hover:text-cyan-400 transition-all active:scale-95">
+                {t('nav_proyectos', 'Proyectos')}
+              </a>
+              <a href="#experiencia" onClick={() => setIsOpen(false)} className="text-3xl text-white font-bold hover:text-cyan-400 transition-all active:scale-95">
+                {t('nav_habilidades', 'Habilidades')}
+              </a>
+              <a href="#contacto" onClick={() => setIsOpen(false)} className="text-3xl text-white font-bold hover:text-cyan-400 transition-all active:scale-95">
+                {t('nav_contacto', 'Contacto')}
+              </a>
+
+              <div className="h-[1px] w-24 bg-slate-800 my-4 shadow-sm"></div>
+
+              {/* Banderas con tamaño optimizado para móvil */}
+              <div className="flex gap-8">
+                {idiomas.map((idioma) => (
+                  <button 
+                    key={idioma.code} 
+                    onClick={() => changeLanguage(idioma.code)} 
+                    className={`transition-all ${i18n.language === idioma.code ? 'scale-125 border-b-2 border-cyan-400 pb-1' : 'opacity-40 hover:opacity-100'}`}
+                  >
+                    <img 
+                      src={`https://flagcdn.com/w80/${idioma.country}.png`} 
+                      className="w-10 rounded-sm shadow-xl" 
+                      alt={idioma.label} 
+                    />
+                  </button>
+                ))}
+              </div>
+
+              {/* Botón de CV destacado en el menú */}
+              <a 
+                href="/CV_Roy.pdf"
+                download
+                className="mt-6 bg-cyan-500 text-slate-950 px-12 py-3 rounded-md font-bold text-lg shadow-[0_0_20px_rgba(34,211,238,0.2)] active:scale-95 transition-all"
+                onClick={() => setIsOpen(false)}
+              >
+                {t('download_cv', 'CV')}
+              </a>
+            </nav>
           </div>
         </div>
       </div>

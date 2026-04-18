@@ -84,9 +84,9 @@ export default function Contact() {
                         name="subject" 
                         className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:border-cyan-400 outline-none transition-colors"
                     >
-                        <option value="Trabajo">{t('opt_work', 'Propuesta Laboral')}</option>
-                        <option value="Consulta">{t('opt_query', 'Consulta General')}</option>
-                        <option value="Error">{t('opt_bug', 'Reportar un error en la página')}</option>
+                        <option value="Trabajo">{t('contact_opt_work', 'Propuesta Laboral')}</option>
+                        <option value="Consulta">{t('contact_opt_query', 'Consulta General')}</option>
+                        <option value="Error">{t('contact_opt_bug', 'Reportar un error en la página')}</option>
                     </select>
             </div>
 

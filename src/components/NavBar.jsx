@@ -3,9 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
+  const [isOpen, setIsOpen] = React.useState(false);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    setIsOpen(false); // cierra menu hamburguesa al cambiar idioma
   };
 
   return (

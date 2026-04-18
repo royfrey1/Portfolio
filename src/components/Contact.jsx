@@ -62,6 +62,8 @@ export default function Contact() {
                     name="name" // IMPORTANTE: Agregamos el atributo name
                     type="text" 
                     required
+                    pattern="^[A-Za-zÁ-ž\s]+$"
+                    title='Por favor, ingresa solo letas'
                     className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-500 transition-all"
                     placeholder= {t('contact_name_placeholder', 'Tu nombre completo')}
                 />
@@ -82,6 +84,8 @@ export default function Contact() {
                     name="message" // IMPORTANTE: Agregamos el atributo name
                     rows="4"
                     required
+                    minLength="5"
+                    title='El mensaje debe tener al menos 5 caracteres'
                     className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-500 transition-all"
                     placeholder= {t('contact_message_placeholder', 'Escribe tu mensaje aquí')}
                     ></textarea>

@@ -18,7 +18,21 @@ export default function Navbar() {
     { code: 'pt', country: 'br', label: 'Português' }
   ];
 
-  return (
+ // Bloqueo de scroll cuando el menú está abierto
+  React.useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Limpieza al desmontar el componente
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  return (    
     <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800 py-4 px-6">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         

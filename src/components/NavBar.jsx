@@ -81,30 +81,65 @@ export default function Navbar() {
       </div>
 
       {/* Menú Móvil (Overlay) */}
-      <div className={`fixed inset-0 bg-slate-950/98 transition-transform duration-200 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden z-40`}>
-        <div className="flex flex-col items-center justify-center h-full w-full text-white">
-          <a href="#" className="hover:text-cyan-400 transition-colors" onClick={() => setIsOpen(false)}>{t('nav_inicio', 'Inicio')}</a>
-          <a href="#projects" className="hover:text-cyan-400 transition-colors" onClick={() => setIsOpen(false)}>{t('nav_proyectos', 'Proyectos')}</a>
-          <a href="#experiencia" className="hover:text-cyan-400 transition-colors" onClick={() => setIsOpen(false)}>{t('nav_habilidades', 'Habilidades')}</a>
-          <a href="#contacto" className="hover:text-cyan-400 transition-colors" onClick={() => setIsOpen(false)}>{t('nav_contacto', 'Contacto')}</a>
+      {/* Menú Móvil (Overlay) */}
+      <div className={`fixed inset-0 bg-slate-950 transition-transform duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden z-[60]`}>
+        
+        {/* Contenedor principal con padding superior para no chocar con el logo */}
+        <div className="flex flex-col items-center justify-center h-full w-full px-6">
           
-          <div className="h-[1px] w-24 bg-slate-800 my-4"></div>
+          {/* Botón de cerrar en la esquina superior derecha */}
+          <button 
+            onClick={() => setIsOpen(false)}
+            className="absolute top-6 right-6 text-slate-400 hover:text-white"
+          >
+            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
 
-          {/* Banderas en Menú Móvil */}
-          <div className="flex gap-10">
-            {idiomas.map((idioma) => (
-              <button 
-                key={idioma.code} 
-                onClick={() => changeLanguage(idioma.code)} 
-                className="scale-150 active:scale-125 transition-transform"
-              >
-                <img 
-                  src={`https://flagcdn.com/w40/${idioma.country}.png`} 
-                  alt={idioma.label}
-                  className="w-10 rounded-sm shadow-lg" 
-                />
-              </button>
-            ))}
+          {/* Lista de links centrada */}
+          <div className="flex flex-col items-center gap-8 text-2xl font-semibold text-white">
+            <a href="#" onClick={() => setIsOpen(false)} className="hover:text-cyan-400 transition-colors">
+              {t('nav_inicio', 'Inicio')}
+            </a>
+            <a href="#projects" onClick={() => setIsOpen(false)} className="hover:text-cyan-400 transition-colors">
+              {t('nav_proyectos', 'Proyectos')}
+            </a>
+            <a href="#experiencia" onClick={() => setIsOpen(false)} className="hover:text-cyan-400 transition-colors">
+              {t('nav_habilidades', 'Habilidades')}
+            </a>
+            <a href="#contacto" onClick={() => setIsOpen(false)} className="hover:text-cyan-400 transition-colors">
+              {t('nav_contacto', 'Contacto')}
+            </a>
+
+            <div className="h-[1px] w-16 bg-slate-800 my-2"></div>
+
+            {/* Banderas */}
+            <div className="flex gap-10">
+              {idiomas.map((idioma) => (
+                <button 
+                  key={idioma.code} 
+                  onClick={() => changeLanguage(idioma.code)} 
+                  className={`transition-transform active:scale-90 ${i18n.language === idioma.code ? 'scale-150' : 'scale-110 opacity-40'}`}
+                >
+                  <img 
+                    src={`https://flagcdn.com/w80/${idioma.country}.png`} 
+                    className="w-10 rounded-sm shadow-2xl" 
+                    alt={idioma.label} 
+                  />
+                </button>
+              ))}
+            </div>
+            
+            {/* Botón de CV también aquí para máxima visibilidad */}
+            <a 
+              href="/CV_Roy.pdf"
+              download
+              className="mt-4 bg-cyan-500 text-slate-950 px-6 py-2 rounded-md font-bold text-sm"
+              onClick={() => setIsOpen(false)}
+            >
+              {t('download_cv', 'Descargar CV')}
+            </a>
           </div>
         </div>
       </div>

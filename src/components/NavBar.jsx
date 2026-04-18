@@ -106,7 +106,7 @@ export default function Navbar() {
           <a href="#contacto" className="hover:text-cyan-400 transition-colors" onClick={() => setIsOpen(false)}>{t('nav_contacto', 'Contacto')}</a>
           
           {/* Banderas en Menú Móvil */}
-          <div className="flex gap-4 mt-2">
+          <div className="flex gap-6 mt-4">
             {[
               { code: 'es', country: 'ar', label: 'Español' },
               { code: 'en', country: 'us', label: 'English' },

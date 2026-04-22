@@ -53,8 +53,8 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           
           <a 
-            href="/CV_Roy.pdf"
-            download="CV_Roy.pdf"
+            href="/CV_Roy2026.pdf"
+            download="CV_Roy2026.pdf"
             className="hidden sm:block bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-4 py-2 rounded-md hover:bg-cyan-500 hover:text-white transition-all text-sm font-medium"
           >
             {t('download_cv', 'Descargar CV')}

@@ -1,16 +1,45 @@
-# React + Vite
+🚀 Portfolio Profesional & Ecosistema de ProyectosDesarrollador: 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Roy Frey (Analista de Sistemas)
+Este repositorio documenta la evolución técnica y el despliegue de mi plataforma profesional, integrando soluciones de frontend moderno, infraestructura cloud y optimización de recursos.
 
-Currently, two official plugins are available:
+🛠️ Stack Tecnológico Evolutivo (Registro de Herramientas)
+Desde el inicio del proyecto hasta hoy, hemos integrado y configurado las siguientes herramientas:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Core de DesarrolloReact.js (Vite): Seleccionado como motor principal por su compilación rápida mediante módulos ES nativos.
+Tailwind CSS: Framework de diseño utilizado para crear interfaces personalizadas sin salir del HTML, aplicando conceptos de Utility-First.
 
-## React Compiler
+2. Infraestructura y Despliegue (DevOps)Vercel: Hosting principal con integración de CI/CD (Continuous Integration/Continuous Deployment), permitiendo actualizaciones automáticas con cada git push.
+Vercel Analytics: Implementación de monitoreo de tráfico para análisis de métricas de usuario.AWS (Amazon Web Services):
+S3: Gestión de almacenamiento de objetos para activos pesados.
+EC2: Conocimientos aplicados en instancias de computación en la nube.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. Componentes e Interactividad (Soluciones de Software)Navegación Dinámica: Navbar con efecto Glassmorphism y detección de scroll mediante estados de React.
+Gestión de Medios:
+Sistema de Lightbox: Implementación de un modal interactivo con z-index dinámico y backdrop-blur para la visualización de paisajes y maderas.
+Carrusel con Scroll Snap: Uso de propiedades nativas de CSS combinadas con React para una navegación táctil fluida.
+Asset Management: Estructuración de archivos en carpeta /public para acceso directo y bypass de empaquetado (Caso: CV en PDF).
 
-## Expanding the ESLint configuration
+📈 Bitácora de Desafíos Técnicos Resueltos
+Desafío,Solución Técnica Aplicada
+Error de Importación de Rutas,Corrección de Relative Paths en archivos JSX (./ vs ../).
+Falla en Build de Vercel,Depuración de dependencias huérfanas (@vercel/analytics) y gestión de paquetes con NPM.
+Persistencia de Caché en PDF,Aplicación de técnicas de Cache Busting y renombrado de archivos para forzar la actualización en el cliente.
+Conflictos de Git,Configuración de ramas (Branching) y flujo de trabajo add -> commit -> push.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+📂 Proyectos en el Ecosistema
+🌲 La Aripuca (Proyecto Destacado)Objetivo: 
+Digitalización y branding de un complejo ecológico regional.
+Tecnologías: React + Tailwind + Data Mapping (JSON para galería de imágenes).
+Estado: En fase de optimización de carruseles e interactividad.
+
+🛒 E-commerce & Otros
+Desarrollo de lógica de carritos de compra y manejo de estados globales.
+
+📌 Próximos Sprints (Backlog)
+
+[ ] Implementación de Infinite Loop en carrusel mediante clonación de nodos en el DOM.
+[ ] Integración de Programación SAP para backend de sistemas empresariales.
+[ ] Optimización de SEO mediante Meta Tags dinámicos.
+

@@ -48,7 +48,7 @@ export default function Projects() {
 
   return (
     // Sección de Proyectos
-    <section id="projects" className="py-20 bg-slate-950 px-4 scroll-mt-18 border-t border-slate-800">
+    <section id="projects" className="py-20 bg-slate-950 px-4 border-t border-slate-800">
       <h2 className="text-4xl font-bold text-white text-center mb-12">
         {t('project_title', 'Mis')} <span className="text-cyan-400 animate-wave">{t('project_title_2', 'Proyectos')}</span>
       </h2> 
@@ -60,7 +60,7 @@ export default function Projects() {
                <img 
                 src={proyectos.image_url} 
                 alt={proyectos.titulo}
-                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" 
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" 
               />
             </div>
             <div className="p-6">
@@ -74,7 +74,9 @@ export default function Projects() {
 
               <a 
                 href={proyectos.link} 
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm transition-colors cursor-pointer"
               >
                 {t('project_details', 'Ver más detalles')}<span className="ml-2">→</span>
               </a>

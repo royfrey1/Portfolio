@@ -20,7 +20,7 @@ export default function Contact() {
             <p className="text-slate-300">{t('contact_location', 'Ubicación: Puerto Iguazu, Misiones, Argentina (Disponible para remoto)')}</p>
             <div className="flex gap-4">
                 <a 
-                    href="https://linkedin.com/in/tu-usuario" 
+                    href="https://www.linkedin.com/in/roy-walter-martinez-frey-bbaa461b8/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-all group"
@@ -30,7 +30,7 @@ export default function Contact() {
                 </a>
 
                 <a 
-                    href="https://github.com/tu-usuario" 
+                    href="https://github.com/royfrey1" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-all group"

@@ -25,7 +25,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-all group"
                 >
-                    <i className="fab fa-linkedin text-3xl"></i>
+                    <i className="fab fa-linkedin text-2xl"></i>
                     <span className="text-sm font-medium">LinkedIn</span>
                 </a>
 
@@ -35,7 +35,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-all group"
                 >
-                    <i className="fab fa-github text-3xl"></i>
+                    <i className="fab fa-github text-2xl"></i>
                     <span className="text-sm font-medium">GitHub</span>
                 </a>
 
@@ -45,7 +45,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-all group"
                 >
-                    <i className="fab fa-instagram text-3xl"></i>
+                    <i className="fab fa-instagram text-2xl"></i>
                     <span className="text-sm font-medium">Instagram</span>
                 </a>
             </div>

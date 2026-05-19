@@ -78,7 +78,7 @@ export default function Projects() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm transition-colors cursor-pointer"
               >
-                {t('project_details', 'Ver más detalles')}<span className="ml-2">→</span>
+                {t('project_details', 'Ver más detalles')}<span className="cursor-pointer ml-2">→</span>
               </a>
             </div>
           </div>

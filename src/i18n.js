@@ -63,7 +63,7 @@ i18n
             ia_logros_1: "Mi enfoque no se limita al uso superficial de la IA, sino a su implementación estratégica para resolver problemas técnicos y arquitectónicos con precisión y escalabilidad.",
             ia_logros_2: "Poseo una sólida capacidad para el diseño de prompts avanzados (Prompt Engineering), lo que me permite automatizar la escritura de código limpio en Python y React, realizar debugging profundo de arquitecturas en la nube como AWS y optimizar la lógica de negocios compleja.",
 // Contact Section 
-            contact_title: "Hablamos?",
+            contact_title: "¿Hablamos?",
             contact_desc: "¿Tienes un proyecto en mente o buscas sumar a alguien a tu equipo? ¡Escríbeme!",
             contact_name: "Nombre",
             contact_name_placeholder: "Tu nombre completo",

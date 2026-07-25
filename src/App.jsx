@@ -1,27 +1,17 @@
-import Hero from './components/Hero'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Navbar from './components/NavBar'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import Experiencias from './components/Experiencia'
-import ScrollToTop from './components/ScrolltoTop'
-import IA from './components/IA'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomeAgency from './pages/HomeAgency';
+import Trayectoria from './pages/trayectoria';
+import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <main className="bg-slate-900 min-h-screen">
-      <Navbar />
-      <Hero />
-      <Skills />
-      <Projects />
-      <Experiencias/>
-      <IA />
-      <Contact />
-      <Footer />
-      <ScrollToTop />
-    </main>
-  )
-}
+    <Routes>
+      {/* Ruta raíz redirige a la landing comercial de Selva Code */}
+      <Route path="/" element={<HomeAgency />} />
 
-export default App
+      {/* Tu ruta alternativa mantiene todo tu perfil e historial previo */}
+      <Route path="/trayectoria" element={<Trayectoria />} />
+    </Routes>
+  );
+}

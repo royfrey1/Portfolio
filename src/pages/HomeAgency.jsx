@@ -1,4 +1,3 @@
-import React from 'react';
 import NavBar from '../components/NavBar';
 import NewHeroAgency from '../components/NewHeroAgency'; // Tu nuevo hero comercial
 import Services from '../components/Services';

@@ -1,7 +1,5 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Heart, ArrowUpRight } from 'lucide-react';
-import logo from '../../public/logo1.png'
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -19,7 +17,7 @@ export default function Footer() {
             {/* Logo y Nombre */}
             <div className="flex items-center gap-2.5">
               <img 
-                src={logo} 
+                src="/logo1.png" 
                 alt="Selva Code Logo" 
                 className="h-12 sm:h-14 md:h-28 w-auto object-contain dark:brightness-110"
               />

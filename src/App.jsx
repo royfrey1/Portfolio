@@ -1,8 +1,6 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomeAgency from './pages/HomeAgency';
 import Trayectoria from './pages/trayectoria';
-import './App.css';
 
 export default function App() {
   return (

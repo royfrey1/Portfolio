@@ -1,5 +1,3 @@
-// componente para mostrar las habilidades técnicas del desarrollador, con categorías y estilos modernos usando Tailwind CSS
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Skills() {

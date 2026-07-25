@@ -1,7 +1,5 @@
-
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import logo from '../../public/logo1.png'
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -20,7 +18,7 @@ export default function Navbar() {
   ];
 
   // Bloqueo de scroll cuando el menú está abierto
-  React.useEffect(() => {
+  useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -39,7 +37,7 @@ export default function Navbar() {
         {/* Logo moderno con el isotipo en verde */}
         <div className="flex items-center gap-2.5 z-50">
           <img 
-            src={logo} 
+            src="/logo1.png" 
             alt="Selva Code Logo" 
             className="h-12 sm:h-14 md:h-24 w-auto object-contain dark:brightness-110"
           />

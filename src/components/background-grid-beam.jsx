@@ -1,5 +1,4 @@
-// src/components/ui/background-grid-beam.jsx
-import React from 'react'
+import { useId } from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '../lib/utils'
 
@@ -52,7 +51,7 @@ export const Beam = ({
   direction = 'top-right' 
 }) => {
   // Generamos un ID único por cada haz para evitar colisión de gradientes SVG
-  const gradientId = React.useId()
+  const gradientId = useId()
 
   const variant = directionVariants[direction] || directionVariants['top-right']
 

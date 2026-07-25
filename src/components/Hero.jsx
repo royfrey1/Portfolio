@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense } from 'react';
+import { useEffect, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage } from '@react-three/drei';

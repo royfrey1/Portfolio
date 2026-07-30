@@ -7,10 +7,9 @@ export default function Navbar() {
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    setIsOpen(false); // Cierra el menú al cambiar de idioma
+    setIsOpen(false);
   };
 
-  // Definimos los idiomas
   const idiomas = [
     { code: 'es', country: 'ar', label: 'Español' },
     { code: 'en', country: 'us', label: 'English' },
@@ -22,50 +21,44 @@ export default function Navbar() {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
     };
   }, [isOpen]);
 
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (    
-    <nav className="sticky top-0 z-50 bg-white backdrop-blur-md border-b border-[#DEDEDE]  px-6 transition-all duration-300">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
+    <nav className="sticky top-0 z-50 bg-white backdrop-blur-md border-b border-[#DEDEDE] px-6 h-16 md:h-20 flex items-center">
+      <div className="max-w-6xl mx-auto w-full flex justify-between items-center relative z-50 bg-transparent">
         
-        {/* Logo moderno con el isotipo en verde */}
-        <div className="flex items-center gap-2.5 z-50">
+        {/* Logo */}
+        <div className="flex items-center gap-2.5">
           <img 
             src="/logo1.png" 
             alt="Selva Code Logo" 
-            className="h-12 sm:h-14 md:h-24 w-auto object-contain dark:brightness-110"
+            className="h-16 sm:h-16 md:h-18 w-auto object-contain"
           />
-          
         </div>
 
-        {/* Links de navegación - Escritorio (Gris oscuro a Verde #3EBD00) */}
+        {/* Links Desktop */}
         <div className="hidden md:flex gap-8 text-[#262626]/80 font-medium items-center">
-          <a href="#" className="hover:text-[#3EBD00] transition-colors">{t('nav_inicio', 'Inicio')}</a>
-          <a href="#pasos" className="hover:text-[#3EBD00] transition-colors">{t('nav_paso', 'Paso a paso')}</a>
-          <a href="#servicios" className="hover:text-[#3EBD00] transition-colors">{t('nav_servicios', 'Servicios')}</a>
-          <a href="#projects" className="hover:text-[#3EBD00] transition-colors">{t('nav_proyectos', 'Proyectos')}</a>          
-          <a href="#contacto" className="hover:text-[#3EBD00] transition-colors">{t('nav_contacto', 'Contacto')}</a>
+          <a href="#" className="hover:text-[#3EBD00] transition-colors text-sm lg:text-base">{t('nav_inicio', 'Inicio')}</a>
+          <a href="#pasos" className="hover:text-[#3EBD00] transition-colors text-sm lg:text-base">{t('nav_paso', 'Paso a paso')}</a>
+          <a href="#servicios" className="hover:text-[#3EBD00] transition-colors text-sm lg:text-base">{t('nav_servicios', 'Servicios')}</a>
+          <a href="#projects" className="hover:text-[#3EBD00] transition-colors text-sm lg:text-base">{t('nav_proyectos', 'Proyectos')}</a>          
+          <a href="#contacto" className="hover:text-[#3EBD00] transition-colors text-sm lg:text-base">{t('nav_contacto', 'Contacto')}</a>
         </div>
 
-        {/* Lado derecho: CV + Banderas Desktop / Botón Hamburguesa */}
+        {/* Lado derecho: Banderas Desktop / Botón Hamburguesa */}
         <div className="flex items-center gap-4">
-          
-          {/* Botón de CV al estilo Stripe (Verde brillante con sombra difuminada) */}
-          <a 
-            href="/CV_Roy2026.pdf"
-            download="CV_Roy2026.pdf"
-            className="hidden sm:block bg-[#3EBD00] hover:bg-[#2D8700] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-sm shadow-[#3EBD00]/20 hover:shadow-md active:scale-95"
-          >
-            {t('download_cv', 'Descargar CV')}
-          </a>
 
-          {/* Banderas Desktop (Gris claro a color al hacer hover o estar activo) */}
+          {/* Banderas Desktop */}
           <div className="hidden md:flex items-center gap-2 border-l border-[#DEDEDE] pl-4">
             {idiomas.map((lang) => (
               <button 
@@ -87,100 +80,103 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Botón Hamburguesa (Adaptado a color oscuro para fondo claro) */}
+          {/* Botón Hamburguesa Animado */}
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-[#262626] focus:outline-none z-50 p-1"
+            className="md:hidden text-[#262626] focus:outline-none p-2 rounded-lg hover:bg-[#F2F2F2] transition-colors flex items-center justify-center w-10 h-10"
+            aria-label="Toggle Menu"
           >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-              )}
-            </svg>
+            <div className="w-6 h-5 flex flex-col justify-between items-center relative">
+              <span 
+                className={`w-full h-0.5 bg-[#262626] rounded-full transition-all duration-300 ease-in-out transform origin-center ${
+                  isOpen ? 'rotate-45 translate-y-[9px]' : ''
+                }`} 
+              />
+              <span 
+                className={`w-full h-0.5 bg-[#262626] rounded-full transition-all duration-200 ease-in-out ${
+                  isOpen ? 'opacity-0 scale-0' : 'opacity-100'
+                }`} 
+              />
+              <span 
+                className={`w-full h-0.5 bg-[#262626] rounded-full transition-all duration-300 ease-in-out transform origin-center ${
+                  isOpen ? '-rotate-45 -translate-y-[9px]' : ''
+                }`} 
+              />
+            </div>
           </button>
         </div>
       </div>
 
-      {/* Menú Móvil (Overlay en color claro y limpio con barra verde) */}
+      {/* MENÚ MÓVIL DROPDOWN (Desplazamiento vertical suave sin colapsar layout) */}
       <div 
-        className={`fixed top-0 left-0 w-full h-[100svh] bg-[#F9F9F9] transition-transform duration-300 ease-in-out transform ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        } md:hidden z-[100]`}
+        className={`md:hidden absolute top-full left-0 w-full bg-white border-b border-[#DEDEDE] shadow-xl transition-all duration-300 ease-in-out py-6 px-6 z-40 ${
+          isOpen 
+            ? 'opacity-100 translate-y-0 pointer-events-auto' 
+            : 'opacity-0 -translate-y-4 pointer-events-none'
+        }`}
       >
-        {/* Borde lateral verde brillante para dar profundidad visual */}
-        <div className="absolute inset-y-0 left-0 w-1.5 bg-[#3EBD00] shadow-[0_0_15px_rgba(62,189,0,0.3)]"></div>
-
-        <div className="flex flex-col h-full w-full relative">
-          
-          {/* Botón de cerrar móvil */}
-          <button 
-            onClick={() => setIsOpen(false)}
-            className="absolute top-6 right-6 text-[#262626] p-2 hover:bg-[#DEDEDE]/50 rounded-full transition-colors"
+        <div className="flex flex-col items-center gap-4">
+          <a 
+            href="#" 
+            onClick={handleLinkClick} 
+            className="text-base font-semibold text-[#262626] hover:text-[#3EBD00] transition-colors"
           >
-            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+            {t('nav_inicio', 'Inicio')}
+          </a>
 
-          {/* Contenedor de links móvil */}
-          <div className="flex flex-col items-center justify-center flex-grow gap-10">
-            
-            <nav className="flex flex-col items-center gap-8">
-              <a href="#" onClick={() => setIsOpen(false)} className="text-3xl text-[#262626] font-bold hover:text-[#3EBD00] transition-all active:scale-95">
-                {t('nav_inicio', 'Inicio')}
-              </a>
+          <a 
+            href="#pasos" 
+            onClick={handleLinkClick} 
+            className="text-base font-semibold text-[#262626] hover:text-[#3EBD00] transition-colors"
+          >
+            {t('nav_paso', 'Paso a paso')}
+          </a>
 
-              <a href="#pasos" onClick={() => setIsOpen(false)} className="text-3xl text-[#262626] font-bold hover:text-[#3EBD00] transition-all active:scale-95">
-                {t('nav_paso', 'Paso a paso')}
-              </a>
+          <a 
+            href="#servicios" 
+            onClick={handleLinkClick} 
+            className="text-base font-semibold text-[#262626] hover:text-[#3EBD00] transition-colors"
+          >
+            {t('nav_servicios', 'Servicios')}
+          </a>
 
-              <a href="#servicios" onClick={() => setIsOpen(false)} className="text-3xl text-[#262626] font-bold hover:text-[#3EBD00] transition-all active:scale-95">
-                {t('nav_servicios', 'Servicios')}
-              </a>
+          <a 
+            href="#projects" 
+            onClick={handleLinkClick} 
+            className="text-base font-semibold text-[#262626] hover:text-[#3EBD00] transition-colors"
+          >
+            {t('nav_proyectos', 'Proyectos')}
+          </a>
 
-              <a href="#projects" onClick={() => setIsOpen(false)} className="text-3xl text-[#262626] font-bold hover:text-[#3EBD00] transition-all active:scale-95">
-                {t('nav_proyectos', 'Proyectos')}
-              </a>
+          <a 
+            href="#contacto" 
+            onClick={handleLinkClick} 
+            className="text-base font-semibold text-[#262626] hover:text-[#3EBD00] transition-colors"
+          >
+            {t('nav_contacto', 'Contacto')}
+          </a>
 
-              <a href="#contacto" onClick={() => setIsOpen(false)} className="text-3xl text-[#262626] font-bold hover:text-[#3EBD00] transition-all active:scale-95">
-                {t('nav_contacto', 'Contacto')}
-              </a>
+          <div className="w-16 h-[1px] bg-[#DEDEDE] my-1" />
 
-              <div className="h-[1px] w-24 bg-[#DEDEDE] my-4"></div>
-
-              {/* Banderas en móvil */}
-              <div className="flex gap-8">
-                {idiomas.map((idioma) => (
-                  <button 
-                    key={idioma.code} 
-                    onClick={() => changeLanguage(idioma.code)} 
-                    className={`transition-all ${
-                      i18n.language === idioma.code 
-                        ? 'scale-125 border-b-2 border-[#3EBD00] pb-1' 
-                        : 'opacity-40 hover:opacity-100'
-                    }`}
-                  >
-                    <img 
-                      src={`https://flagcdn.com/w80/${idioma.country}.png`} 
-                      className="w-10 rounded-sm shadow-md" 
-                      alt={idioma.label} 
-                    />
-                  </button>
-                ))}
-              </div>
-
-              {/* Botón de CV destacado en menú móvil */}
-              <a 
-                href="/CV_Roy.pdf"
-                download
-                className="mt-6 bg-[#3EBD00] hover:bg-[#2D8700] text-white px-12 py-3 rounded-xl font-bold text-lg shadow-md shadow-[#3EBD00]/15 active:scale-95 transition-all"
-                onClick={() => setIsOpen(false)}
+          {/* Banderas en Móvil */}
+          <div className="flex items-center gap-5">
+            {idiomas.map((idioma) => (
+              <button 
+                key={idioma.code} 
+                onClick={() => changeLanguage(idioma.code)} 
+                className="transition-transform active:scale-95 focus:outline-none"
               >
-                {t('download_cv', 'CV')}
-              </a>
-            </nav>
+                <img 
+                  src={`https://flagcdn.com/w80/${idioma.country}.png`} 
+                  className={`w-7 h-auto rounded-sm transition-all ${
+                    i18n.language === idioma.code 
+                      ? 'scale-110 border border-[#3EBD00] shadow-sm' 
+                      : 'opacity-40 hover:opacity-100 grayscale hover:grayscale-0'
+                  }`} 
+                  alt={idioma.label} 
+                />
+              </button>
+            ))}
           </div>
         </div>
       </div>

@@ -153,14 +153,14 @@ export default function Projects() {
                   <motion.div 
                     whileHover={{ y: -6 }}
                     transition={{ duration: 0.3 }}
-                    className="group relative h-[360px] w-full rounded-2xl overflow-hidden bg-slate-950 border border-slate-200/80 shadow-lg flex flex-col justify-between p-6"
+                    className="group relative h-[380px] w-full rounded-md overflow-hidden bg-slate-950 border border-slate-200/80 shadow-lg flex flex-col justify-between p-6"
                   >
                     {/* Imagen de Fondo */}
                     <div className="absolute inset-0 z-0">
                       <img 
                         src={proyecto.image_url || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80"} 
                         alt={proyecto.titulo} 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-80"
+                        className="w-auto h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-80"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
                     </div>
@@ -184,8 +184,8 @@ export default function Projects() {
                     </div>
 
                     {/* Texto inferior de la Card */}
-                    <div className="relative z-10 space-y-2">
-                      <h3 className="text-lg font-bold text-white tracking-tight leading-snug group-hover:text-[#3EBD00] transition-colors">
+                    <div className="relative z-10 space-y-2 pb-4">
+                      <h3 className=" text-lg font-bold text-white tracking-tight leading-snug group-hover:text-[#3EBD00] transition-colors">
                         {proyecto.titulo}
                       </h3>
                       

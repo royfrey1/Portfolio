@@ -85,7 +85,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <section id="contacto" className="relative py-24 bg-slate-50 overflow-hidden scroll-mt-16">
+    <section id="contacto" className="relative py-18 bg-slate-50 overflow-hidden scroll-mt-16">
       
       {/* Canvas animado de fondo suave */}
       <canvas 
@@ -103,7 +103,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="mb-3"
           >
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3EBD00]/10 border border-[#3EBD00]/20 text-[#3EBD00] text-xs font-bold tracking-widest uppercase">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-[#3EBD00]/10 border border-[#3EBD00]/20 text-[#3EBD00] text-xs font-bold tracking-widest uppercase">
               <Sparkles className="w-3.5 h-3.5 text-[#3EBD00]" />
               {t('contact_tag', 'Hablemos')}
             </span>
@@ -133,7 +133,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="md:col-span-5 space-y-6"
           >
-            <div className="bg-white/80 backdrop-blur-md border border-slate-200/80 p-8 rounded-2xl shadow-sm space-y-6">
+            <div className="bg-white/80 backdrop-blur-md border border-slate-200/80 p-8 rounded-md shadow-sm space-y-6">
               <h3 className="text-xl font-bold text-[#262626] tracking-tight">
                 {t('contact_info_title', 'Información de contacto')}
               </h3>
@@ -172,7 +172,7 @@ export default function Contact() {
                     href="https://www.linkedin.com/in/roy-walter-martinez-frey-bbaa461b8/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#3EBD00] text-slate-700 hover:text-white transition-all text-xs font-semibold shadow-sm group"
+                    className="flex items-center gap-2 px-4 py-2.5 rounded-md bg-slate-100 hover:bg-[#3EBD00] text-slate-700 hover:text-white transition-all text-xs font-semibold shadow-sm group"
                   >
                     <svg className="w-4 h-4 fill-current text-[#3EBD00] group-hover:text-white transition-colors" viewBox="0 0 24 24">
                       <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
@@ -185,7 +185,7 @@ export default function Contact() {
                     href="https://github.com/royfrey1" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#3EBD00] text-slate-700 hover:text-white transition-all text-xs font-semibold shadow-sm group"
+                    className="flex items-center gap-2 px-4 py-2.5 rounded-md bg-slate-100 hover:bg-[#3EBD00] text-slate-700 hover:text-white transition-all text-xs font-semibold shadow-sm group"
                   >
                     <svg className="w-4 h-4 fill-current text-[#3EBD00] group-hover:text-white transition-colors" viewBox="0 0 24 24">
                       <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
@@ -198,7 +198,7 @@ export default function Contact() {
                     href="https://instagram.com/roy.frey" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#3EBD00] text-slate-700 hover:text-white transition-all text-xs font-semibold shadow-sm group"
+                    className="flex items-center gap-2 px-4 py-2.5 rounded-md bg-slate-100 hover:bg-[#3EBD00] text-slate-700 hover:text-white transition-all text-xs font-semibold shadow-sm group"
                   >
                     <svg className="w-4 h-4 fill-current text-[#3EBD00] group-hover:text-white transition-colors" viewBox="0 0 24 24">
                       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -221,7 +221,7 @@ export default function Contact() {
             <form 
               action="https://formspree.io/f/xgopjelq" 
               method="POST" 
-              className="bg-white/90 backdrop-blur-md border border-slate-200/80 p-8 rounded-2xl shadow-sm space-y-5"
+              className="bg-white/90 backdrop-blur-md border border-slate-200/80 p-8 rounded-md shadow-sm space-y-5"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
@@ -234,7 +234,7 @@ export default function Contact() {
                     required
                     pattern="^[A-Za-zÁ-ž\s]+$"
                     title='Por favor, ingresa solo letras'
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#262626] focus:bg-white focus:outline-none focus:border-[#3EBD00] focus:ring-2 focus:ring-[#3EBD00]/20 transition-all placeholder:text-slate-400 font-normal"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 text-sm text-[#262626] focus:bg-white focus:outline-none focus:border-[#3EBD00] focus:ring-2 focus:ring-[#3EBD00]/20 transition-all placeholder:text-slate-400 font-normal"
                     placeholder={t('contact_name_placeholder', 'Tu nombre completo')}
                   />
                 </div>
@@ -247,7 +247,7 @@ export default function Contact() {
                     name="email" 
                     type="email" 
                     required
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#262626] focus:bg-white focus:outline-none focus:border-[#3EBD00] focus:ring-2 focus:ring-[#3EBD00]/20 transition-all placeholder:text-slate-400 font-normal"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 text-sm text-[#262626] focus:bg-white focus:outline-none focus:border-[#3EBD00] focus:ring-2 focus:ring-[#3EBD00]/20 transition-all placeholder:text-slate-400 font-normal"
                     placeholder={t('contact_email_placeholder', 'correo@ejemplo.com')}
                   />
                 </div>
@@ -259,7 +259,7 @@ export default function Contact() {
                 </label>
                 <select 
                   name="subject" 
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#262626] focus:bg-white focus:outline-none focus:border-[#3EBD00] focus:ring-2 focus:ring-[#3EBD00]/20 transition-all outline-none font-normal"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 text-sm text-[#262626] focus:bg-white focus:outline-none focus:border-[#3EBD00] focus:ring-2 focus:ring-[#3EBD00]/20 transition-all outline-none font-normal"
                 >
                   <option value="Trabajo">{t('contact_opt_work', 'Propuesta Laboral')}</option>
                   <option value="Consulta">{t('contact_opt_query', 'Consulta General')}</option>
@@ -277,7 +277,7 @@ export default function Contact() {
                   required
                   minLength="5"
                   title='El mensaje debe tener al menos 5 caracteres'
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#262626] focus:bg-white focus:outline-none focus:border-[#3EBD00] focus:ring-2 focus:ring-[#3EBD00]/20 transition-all placeholder:text-slate-400 resize-none font-normal"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 text-sm text-[#262626] focus:bg-white focus:outline-none focus:border-[#3EBD00] focus:ring-2 focus:ring-[#3EBD00]/20 transition-all placeholder:text-slate-400 resize-none font-normal"
                   placeholder={t('contact_message_placeholder', 'Escribe tu mensaje aquí...')}
                 ></textarea>
               </div>

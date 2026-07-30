@@ -66,15 +66,15 @@ export default function OurProcess() {
   const IconComponent = currentStep.icon;
 
   return (
-    <section id="pasos" className="py-24 bg-[#F8FAFC] text-[#262626] relative overflow-hidden border-b border-[#DEDEDE]">
+    <section id="pasos" className="py-16 sm:py-24 bg-[#F8FAFC] text-[#262626] relative overflow-hidden border-b border-[#DEDEDE]">
       
       {/* FONDO DECORATIVO */}
       <div className="absolute inset-0 bg-[radial-gradient(#DEDEDE_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* ENCABEZADO */}
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#3EBD00]/10 border border-[#3EBD00]/20 text-[#3EBD00] text-xs font-bold tracking-widest uppercase mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#3EBD00] animate-pulse" />
             {t('process_badge', 'NUESTRO PROCESO')}
@@ -82,16 +82,16 @@ export default function OurProcess() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#262626] leading-tight">
             {t('process_title', 'Un método claro para resultados extraordinarios')}
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#262626]/70 leading-relaxed">
+          <p className="mt-4 text-sm sm:text-lg text-[#262626]/70 leading-relaxed">
             {t('process_subtitle', 'Seguimos un flujo de trabajo estructurado y transparente para convertir ideas complejas en productos digitales de alto rendimiento.')}
           </p>
         </div>
 
         {/* GRID INTERACTIVO */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
           
           {/* PASOS DE LA IZQUIERDA (TIMELINE INTERACTIVO) */}
-          <div className="lg:col-span-5 space-y-3 relative">
+          <div className="lg:col-span-5 space-y-2.5 sm:space-y-3 relative">
             {steps.map((step, index) => {
               const isActive = activeStep === index;
               const StepIcon = step.icon;
@@ -100,9 +100,9 @@ export default function OurProcess() {
                 <button
                   key={step.id}
                   onClick={() => setActiveStep(index)}
-                  className={`w-full text-left p-5 rounded-2xl transition-all duration-300 relative flex items-center gap-4 group ${
+                  className={`w-full text-left p-4 sm:p-5 rounded-2xl transition-all duration-300 relative flex items-center gap-3.5 sm:gap-4 group ${
                     isActive
-                      ? 'bg-white shadow-md shadow-[#3EBD00]/50 border border-[#3EBD00]'
+                      ? 'bg-white shadow-md shadow-[#3EBD00]/10 border border-[#3EBD00]'
                       : 'hover:bg-white/60 border border-transparent'
                   }`}
                 >
@@ -117,7 +117,7 @@ export default function OurProcess() {
 
                   {/* Círculo con Icono */}
                   <div
-                    className={`w-11 h-11 rounded-xl flex items-center justify-center transition-colors duration-300 shrink-0 ${
+                    className={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center transition-colors duration-300 shrink-0 ${
                       isActive
                         ? 'bg-[#3EBD00] text-white shadow-sm shadow-[#3EBD00]/30'
                         : 'bg-[#DEDEDE]/60 text-[#262626]/70 group-hover:bg-[#DEDEDE]'
@@ -132,18 +132,20 @@ export default function OurProcess() {
                       <span className={`text-xs font-mono font-bold ${isActive ? 'text-[#3EBD00]' : 'text-[#B3B3B3]'}`}>
                         {step.id}
                       </span>
-                      <span className="text-[11px] font-semibold text-[#B3B3B3]">
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-[#B3B3B3]">
                         {step.badge}
                       </span>
                     </div>
-                    <h3 className={`text-base font-bold truncate transition-colors ${isActive ? 'text-[#262626]' : 'text-[#262626]/80'}`}>
+
+                    {/* CORRECCIÓN: Se quita truncate y se usa whitespace-normal para envolver el texto en móviles */}
+                    <h3 className={`text-sm sm:text-base font-bold whitespace-normal leading-snug transition-colors ${isActive ? 'text-[#262626]' : 'text-[#262626]/80'}`}>
                       {step.title}
                     </h3>
                   </div>
 
                   <ArrowRight
-                    className={`w-4 h-4 transition-transform duration-300 ${
-                      isActive ? 'text-[#3EBD00] translate-x-1' : 'text-[#B3B3B3] opacity-0 group-hover:opacity-100'
+                    className={`w-4 h-4 shrink-0 transition-transform duration-300 ${
+                      isActive ? 'text-[#3EBD00] translate-x-0.5 sm:translate-x-1' : 'text-[#B3B3B3] opacity-0 group-hover:opacity-100'
                     }`}
                   />
                 </button>
@@ -151,11 +153,11 @@ export default function OurProcess() {
             })}
           </div>
 
-          {/* TARJETA DINÁMICA DE LA DERECHA (ANIMADA CON FRAMER MOTION) */}
-          <div className="lg:col-span-7 sticky top-28">
-            <div className="bg-white border border-[#DEDEDE] rounded-3xl p-8 shadow-xl shadow-slate-200/50 relative overflow-hidden min-h-[420px] flex flex-col justify-between">
+          {/* TARJETA DINÁMICA DE LA DERECHA */}
+          <div className="lg:col-span-7 lg:sticky lg:top-28 mt-4 lg:mt-0">
+            <div className="bg-white border border-[#DEDEDE] rounded-3xl p-5 sm:p-8 shadow-xl shadow-slate-200/50 relative overflow-hidden min-h-0 sm:min-h-[420px] flex flex-col justify-between">
               
-              {/* Resplandor suave en esquina con tu verde principal */}
+              {/* Resplandor suave */}
               <div className="absolute -top-20 -right-20 w-56 h-56 bg-[#3EBD00]/10 rounded-full blur-3xl pointer-events-none" />
 
               <AnimatePresence mode="wait">
@@ -165,37 +167,37 @@ export default function OurProcess() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.25, ease: 'easeOut' }}
-                  className="space-y-6"
+                  className="space-y-5 sm:space-y-6"
                 >
-                  {/* Sub-header de la Tarjeta */}
-                  <div className="flex items-center justify-between border-b border-[#DEDEDE] pb-5">
+                  {/* CORRECCIÓN: flex-col en pantallas pequeñas para evitar superposición del indicador 01 / 04 */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#DEDEDE] pb-4 sm:pb-5">
                     <div className="flex items-center gap-3">
-                      <div className="p-2.5 bg-[#3EBD00]/10 text-[#3EBD00] rounded-xl">
-                        <IconComponent className="w-6 h-6" />
+                      <div className="p-2 sm:p-2.5 bg-[#3EBD00]/10 text-[#3EBD00] rounded-xl shrink-0">
+                        <IconComponent className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                       <div>
-                        <span className="text-xs font-mono font-semibold text-[#B3B3B3] uppercase block">
+                        <span className="text-[10px] sm:text-xs font-mono font-semibold text-[#B3B3B3] uppercase block">
                           Selva Code Process
                         </span>
-                        <h4 className="text-xl font-bold text-[#262626]">
+                        <h4 className="text-lg sm:text-xl font-bold text-[#262626] leading-snug">
                           {currentStep.title}
                         </h4>
                       </div>
                     </div>
 
-                    <span className="text-xs font-bold font-mono px-3 py-1 bg-[#262626] text-white rounded-full">
+                    <span className="self-start sm:self-auto text-xs font-bold font-mono px-2.5 py-1 bg-[#262626] text-white rounded-full">
                       {currentStep.id} / 04
                     </span>
                   </div>
 
-                  {/* Descripción Breve */}
-                  <p className="text-base text-[#262626]/80 leading-relaxed font-normal">
+                  {/* Descripción */}
+                  <p className="text-sm sm:text-base text-[#262626]/80 leading-relaxed font-normal">
                     {currentStep.description}
                   </p>
 
-                  {/* Lista de Highlights / Puntos clave */}
-                  <div className="space-y-3 pt-2">
-                    <span className="text-xs font-bold text-[#B3B3B3] uppercase tracking-wider block">
+                  {/* Lista de Highlights */}
+                  <div className="space-y-2.5 sm:space-y-3 pt-1 sm:pt-2">
+                    <span className="text-[10px] sm:text-xs font-bold text-[#B3B3B3] uppercase tracking-wider block">
                       Entregables & Metas
                     </span>
                     {currentStep.highlights.map((item, i) => (
@@ -204,10 +206,10 @@ export default function OurProcess() {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: i * 0.08 + 0.1 }}
-                        className="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8FAFC] border border-[#DEDEDE]/80"
+                        className="flex items-start sm:items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8FAFC] border border-[#DEDEDE]/80"
                       >
-                        <CheckCircle2 className="w-5 h-5 text-[#3EBD00] shrink-0" />
-                        <span className="text-sm font-medium text-[#262626]">
+                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#3EBD00] shrink-0 mt-0.5 sm:mt-0" />
+                        <span className="text-xs sm:text-sm font-medium text-[#262626] leading-snug">
                           {item}
                         </span>
                       </motion.div>
@@ -217,8 +219,8 @@ export default function OurProcess() {
               </AnimatePresence>
 
               {/* BARRA DE PROGRESO INFERIOR */}
-              <div className="pt-6 border-t border-[#DEDEDE] mt-6">
-                <div className="flex justify-between items-center text-xs font-mono text-[#B3B3B3] mb-2">
+              <div className="pt-5 sm:pt-6 border-t border-[#DEDEDE] mt-5 sm:mt-6">
+                <div className="flex justify-between items-center text-[10px] sm:text-xs font-mono text-[#B3B3B3] mb-2">
                   <span>PROGRESO DE FASE</span>
                   <span className="font-bold text-[#3EBD00]">
                     {((activeStep + 1) * 25)}%

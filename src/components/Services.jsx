@@ -29,7 +29,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="servicios" className="relative pt-24 pb-36 bg-white scroll-mt-16 overflow-hidden">
+    <section id="servicios" className="relative pt-18 pb-36 bg-white scroll-mt-16 overflow-hidden">
       
       {/* Malla suave de fondo en tonos grises para darle textura al blanco */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] opacity-70 pointer-events-none" />

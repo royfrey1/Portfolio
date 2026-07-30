@@ -19,7 +19,7 @@ export default function Footer() {
               <img 
                 src="/logo1.png" 
                 alt="Selva Code Logo" 
-                className="h-12 sm:h-14 md:h-28 w-auto object-contain dark:brightness-110"
+                className="h-24 sm:h-14 md:h-28 w-auto object-contain dark:brightness-110"
               />
             </div>
 

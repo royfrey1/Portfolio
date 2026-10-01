@@ -141,7 +141,7 @@ export default function Footer() {
         {/* PIE DE PÁGINA: Copyright & Hecho con amor */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>
-            © {currentYear} Iguazú Marketplace. {t('footer_rights', 'Todos los derechos reservados.')}
+            © {currentYear} Selva Code. {t('footer_rights', 'Todos los derechos reservados.')}
           </p>
 
           <p className="flex items-center gap-1.5">
